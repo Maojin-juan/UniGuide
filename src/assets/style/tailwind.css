@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* 擴充專案的全站樣式 */  
+  /* 擴充專案的全站樣式 */
 }
 
 @layer components {
-  /* 自組元件 */  
+  /* 自組元件 */
 }
 
 @layer utilities {
-  /* 自組樣式 */  
+  /* 自組樣式 */
 }
