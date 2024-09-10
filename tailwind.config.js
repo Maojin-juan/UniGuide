@@ -10,23 +10,24 @@ export default {
       colors: {},
 
       fontFamily: {
-        sans: ["Roboto Mono", "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
 
       container: {
         center: true,
-        padding: {
-          DEFAULT: "14px",
-          md: "2.25rem",
-        },
+        padding: "1.5rem",
+      },
+
+      maxWidth: {
+        screen: "375px",
       },
 
       screens: {
-        sm: "576px",
-        md: "768px",
-        lg: "992px",
-        xl: "1200px",
-        "2xl": "1400px",
+        sm: "375px",
+        md: "375px",
+        lg: "375px",
+        xl: "375px",
+        "2xl": "375px",
       },
     },
   },
