@@ -25,6 +25,7 @@
     "vite-plugin-live-reload": "^3.0.2"
   },
   "dependencies": {
+    "boxicons": "^2.1.4",
     "flowbite": "^2.5.1"
   }
 }
