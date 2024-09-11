@@ -47,7 +47,7 @@ export default {
       },
 
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        sans: ['-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "sans-serif"'],
       },
 
       container: {
@@ -65,6 +65,21 @@ export default {
         lg: "375px",
         xl: "375px",
         "2xl": "375px",
+      },
+      boxShadow: {
+        'xxs': '0px 1px 2px 0px #0000000D',
+        'xs': '0px 1px 2px 0px #0000000F, 0px 1px 3px 0px #0000001A',
+        'sm': '0px 2px 4px -2px #0000000F, 0px 4px 8px -2px #0000001A',
+        'md': '0px 4px 6px -2px #00000008, 0px 12px 16px -4px #00000014',
+        'lg': '0px 8px 8px -4px #00000008, 0px 20px 24px -4px #00000014',
+        'xl': '0px 24px 48px -12px #0000002E',
+        'xxl': '0px 32px 64px -12px #00000024',  
+      },
+      borderWidth: {
+        '3': '3px',
+      },
+      fontSize: {
+        xxs: ['10px', '16px'],
       },
     },
   },
