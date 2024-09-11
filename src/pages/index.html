@@ -6,129 +6,71 @@
     <title>index</title>
   </head>
   <body>
-    <div class="container">
-      <nav>
-        <label
-          for="default-search"
-          class="sr-only mb-2 text-sm font-medium text-gray-900"
-        >
-          Search
-        </label>
-        <div>
-          <input
-            type="search"
-            id="default-search"
-            class="block w-full rounded-lg border-none bg-white p-4 text-sm shadow-[0px_6px_12px_-4px_#0000001A] focus:border-[#858B8A] focus:ring-[#858B8A]"
-            placeholder="Where to?"
-            required
-          />
-        </div>
-      </nav>
-    </div>
-
-    <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-      <ul
-        class="-mb-px flex flex-wrap text-center text-sm font-medium"
-        id="default-styled-tab"
-        data-tabs-toggle="#default-styled-tab-content"
-        data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
-        data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
-        role="tablist"
+    <nav class="container mb-2">
+      <label
+        for="default-search"
+        class="sr-only mb-2 text-sm font-medium text-gray-900"
       >
-        <li class="me-2" role="presentation">
-          <button
-            class="inline-block rounded-t-lg border-b-2 p-4"
-            id="profile-styled-tab"
-            data-tabs-target="#styled-profile"
-            type="button"
-            role="tab"
-            aria-controls="profile"
-            aria-selected="false"
+        Search
+      </label>
+      <div
+        class="flex items-center gap-x-2 rounded-lg px-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <box-icon name="search-alt-2"></box-icon>
+        <input
+          type="search"
+          id="default-search"
+          class="w-full border-none bg-white px-0 py-4 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
+          placeholder="Where to?"
+          required
+        />
+      </div>
+    </nav>
+
+    <div class="border-b border-gray-200 text-center font-semibold">
+      <ul class="-mb-px flex">
+        <li class="relative w-full">
+          <a
+            href="#"
+            class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
           >
             Tour
-          </button>
+          </a>
         </li>
-        <li class="me-2" role="presentation">
-          <button
-            class="inline-block rounded-t-lg border-b-2 p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
-            id="dashboard-styled-tab"
-            data-tabs-target="#styled-dashboard"
-            type="button"
-            role="tab"
-            aria-controls="dashboard"
-            aria-selected="false"
+        <li class="relative w-full">
+          <a
+            href="#"
+            class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
+            aria-current="page"
           >
             Meet-up
-          </button>
+          </a>
         </li>
       </ul>
     </div>
-    <div id="default-styled-tab-content">
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-profile"
-        role="tabpanel"
-        aria-labelledby="profile-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Profile tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-dashboard"
-        role="tabpanel"
-        aria-labelledby="dashboard-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Dashboard tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-settings"
-        role="tabpanel"
-        aria-labelledby="settings-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Settings tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-contacts"
-        role="tabpanel"
-        aria-labelledby="contacts-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Contacts tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-    </div>
+
+    <ul class="text-neutral-400">
+      <li class="flex flex-col items-center">
+        <box-icon name="leaf" class="outline-neutral-400"></box-icon>
+        Natural
+      </li>
+      <li class="flex flex-col items-center">
+        <box-icon name="restaurant"></box-icon>
+        Local cuisine
+      </li>
+      <li class="flex flex-col items-center">
+        <box-icon name="palette"></box-icon>
+        Arts
+      </li>
+      <li class="flex flex-col items-center">
+        <img src="../assets/svg/Hiking.svg" alt="Hiking" />
+        Hiking
+      </li>
+      <li class="flex flex-col items-center">
+        <img src="../assets/svg/Surfing.svg" alt="Hiking" />
+        Surfing
+      </li>
+    </ul>
 
     <script type="module" src="../main.js"></script>
   </body>
