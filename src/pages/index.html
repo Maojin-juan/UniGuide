@@ -5,72 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
   </head>
-  <body>
-    <nav class="container mb-2">
-      <label
-        for="default-search"
-        class="sr-only mb-2 text-sm font-medium text-gray-900"
-      >
-        Search
-      </label>
-      <div
-        class="flex items-center gap-x-2 rounded-lg px-4 shadow-[0px_6px_12px_-4px_#0000001A]"
-      >
-        <box-icon name="search-alt-2"></box-icon>
-        <input
-          type="search"
-          id="default-search"
-          class="w-full border-none bg-white px-0 py-4 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
-          placeholder="Where to?"
-          required
-        />
+  <body class="pb-[68px] pt-28">
+    <nav class="fixed left-0 top-0 z-50 w-full bg-white">
+      <!-- SearchInput -->
+      <div class="container">
+        <label
+          for="default-search"
+          class="sr-only text-sm font-medium text-gray-900"
+        >
+          Search
+        </label>
+        <div
+          class="-mb-px flex items-center gap-x-2 rounded-lg px-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+        >
+          <box-icon name="search-alt-2"></box-icon>
+          <input
+            type="search"
+            id="default-search"
+            class="w-full border-none bg-white px-0 py-4 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
+            placeholder="Where to?"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="mt-2 border-b border-neutral-100 text-center font-semibold">
+        <ul class="container -mb-px flex px-0">
+          <li class="relative w-full">
+            <a
+              href="#"
+              class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
+            >
+              Tour
+            </a>
+          </li>
+          <li class="relative w-full">
+            <a
+              href="#"
+              class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
+              aria-current="page"
+            >
+              Meet-up
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <div class="border-b border-gray-200 text-center font-semibold">
-      <ul class="-mb-px flex">
-        <li class="relative w-full">
-          <a
-            href="#"
-            class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
-          >
-            Tour
-          </a>
+    <section>
+      <!-- FeatureList -->
+      <ul
+        class="flex justify-center gap-x-2 pb-4 ps-6 text-[11px] text-neutral-400"
+      >
+        <li class="flex flex-col items-center">
+          <box-icon name="leaf" color="#858B8A" class="mx-[18px]"></box-icon>
+          Natural
         </li>
-        <li class="relative w-full">
-          <a
-            href="#"
-            class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
-            aria-current="page"
-          >
-            Meet-up
-          </a>
+        <li class="flex flex-col items-center">
+          <box-icon
+            name="restaurant"
+            color="#858B8A"
+            class="mx-[26px]"
+          ></box-icon>
+          Local cuisine
+        </li>
+        <li class="flex flex-col items-center">
+          <box-icon name="palette" color="#858B8A" class="mx-[18px]"></box-icon>
+          Arts
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="../assets/svg/Hiking.svg" alt="Hiking" class="mx-[18px]" />
+          Hiking
+        </li>
+        <li class="flex flex-col items-center">
+          <img src="../assets/svg/Surfing.svg" alt="Hiking" class="mx-[18px]" />
+          Surfing
         </li>
       </ul>
-    </div>
 
-    <ul class="text-neutral-400">
-      <li class="flex flex-col items-center">
-        <box-icon name="leaf" class="outline-neutral-400"></box-icon>
-        Natural
-      </li>
-      <li class="flex flex-col items-center">
-        <box-icon name="restaurant"></box-icon>
-        Local cuisine
-      </li>
-      <li class="flex flex-col items-center">
-        <box-icon name="palette"></box-icon>
-        Arts
-      </li>
-      <li class="flex flex-col items-center">
-        <img src="../assets/svg/Hiking.svg" alt="Hiking" />
-        Hiking
-      </li>
-      <li class="flex flex-col items-center">
-        <img src="../assets/svg/Surfing.svg" alt="Hiking" />
-        Surfing
-      </li>
-    </ul>
+      <!-- Card -->
+      <div class="container pb-[5px]">
+        <h2 class="mb-3 text-xl font-bold">Recommendations for You</h2>
+        <!-- CardCover -->
+        <div class="relative mb-2">
+          <img
+            src="../assets/img/homepage/homepage01.jpg"
+            alt="homepage01"
+            class="rounded-2xl"
+          />
+          <button
+            class="absolute right-4 top-4 flex size-12 items-center justify-center rounded-full bg-white bg-opacity-50"
+          >
+            <box-icon name="heart" type="solid" color="#ffffff"></box-icon>
+          </button>
+        </div>
+        <!-- CardContent -->
+        <div class="space-y-1 text-sm">
+          <!-- title -->
+          <div class="flex justify-between">
+            <h3 class="text-base font-bold">North Coast Exploration</h3>
+            <div class="flex items-center gap-x-1">
+              <box-icon
+                type="solid"
+                name="star"
+                color="#FFDA44"
+                class="mb-[0.4px] size-4"
+              ></box-icon>
+              <span class="font-semibold">4.9</span>
+              <span class="text-neutral-400">(145)</span>
+            </div>
+          </div>
+
+          <!-- tags -->
+          <ul class="flex gap-x-1 text-brand-800">
+            <li>
+              <a href="#" class="rounded-full bg-brand-300 px-2">
+                Outdoor activities
+              </a>
+            </li>
+            <li>
+              <a href="#" class="rounded-full bg-brand-100 px-2">Nature</a>
+            </li>
+            <li>
+              <a href="#" class="rounded-full bg-brand-100 px-2">Beach walk</a>
+            </li>
+          </ul>
+
+          <!-- date -->
+          <p class="text-neutral-500">Aug 21 – 25</p>
+
+          <!-- price -->
+          <div class="flex gap-x-0.5">
+            <p class="font-semibold">$ 715 TWD</p>
+            <p>/ person</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="fixed bottom-0 left-0 z-50 w-full border-t border-neutral-100 shadow-md"
+    >
+      <ul
+        class="flex justify-center bg-white px-2 py-1 text-[10px] text-neutral-300"
+      >
+        <li class="flex flex-col items-center gap-y-1 py-2 text-black">
+          <box-icon name="search-alt-2" class="mx-6"></box-icon>
+          Explore
+        </li>
+        <li class="flex flex-col items-center gap-y-1 py-2">
+          <box-icon name="heart" color="#AEB2B1" class="mx-6"></box-icon>
+          Wishlists
+        </li>
+        <li class="flex flex-col items-center gap-y-1 py-2">
+          <img src="../assets/svg/Order.svg" alt="Order" class="mx-6" />
+          Orders
+        </li>
+        <li class="flex flex-col items-center gap-y-1 py-2">
+          <img
+            src="../assets/svg/LogoNoFeet.svg"
+            alt="LogoNoFeet"
+            class="mx-6"
+          />
+          Messages
+        </li>
+        <li class="flex flex-col items-center gap-y-1 py-2">
+          <box-icon name="user" color="#AEB2B1" class="mx-6"></box-icon>
+          Profile
+        </li>
+      </ul>
+    </footer>
 
     <script type="module" src="../main.js"></script>
   </body>
