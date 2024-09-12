@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
   </head>
-  <body class="pb-[68px] pt-28">
+  <body class="pb-[73px] pt-28">
     <nav class="fixed left-0 top-0 z-50 w-full bg-white">
       <!-- SearchInput -->
       <div class="container">
@@ -18,7 +18,7 @@
         <div
           class="-mb-px flex items-center gap-x-2 rounded-lg px-4 shadow-[0px_6px_12px_-4px_#0000001A]"
         >
-          <box-icon name="search-alt-2"></box-icon>
+          <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
           <input
             type="search"
             id="default-search"
@@ -56,106 +56,51 @@
     <section>
       <!-- FeatureList -->
       <ul
-        class="flex justify-center gap-x-2 pb-4 ps-6 text-[11px] text-neutral-400"
+        class="flex justify-center gap-x-2 pb-4 pt-2 text-[11px] font-bold leading-[16.5px] text-neutral-400"
       >
-        <li class="flex flex-col items-center">
-          <box-icon name="leaf" color="#858B8A" class="mx-[18px]"></box-icon>
+        <li class="flex flex-col items-center gap-y-1.5">
+          <i
+            class="bx bx-leaf mx-[18px] text-2xl leading-6 text-neutral-400"
+          ></i>
           Natural
         </li>
-        <li class="flex flex-col items-center">
-          <box-icon
-            name="restaurant"
-            color="#858B8A"
-            class="mx-[26px]"
-          ></box-icon>
+        <li class="flex flex-col items-center gap-y-1.5">
+          <i
+            class="bx bx-restaurant mx-[18px] text-2xl leading-6 text-neutral-400"
+          ></i>
           Local cuisine
         </li>
-        <li class="flex flex-col items-center">
-          <box-icon name="palette" color="#858B8A" class="mx-[18px]"></box-icon>
+        <li class="flex flex-col items-center gap-y-1.5">
+          <i
+            class="bx bx-palette mx-[18px] text-2xl leading-6 text-neutral-400"
+          ></i>
           Arts
         </li>
-        <li class="flex flex-col items-center">
+        <li class="flex flex-col items-center justify-between gap-y-1.5">
           <img src="../assets/svg/Hiking.svg" alt="Hiking" class="mx-[18px]" />
           Hiking
         </li>
-        <li class="flex flex-col items-center">
+        <li class="flex flex-col items-center justify-between gap-y-1.5">
           <img src="../assets/svg/Surfing.svg" alt="Hiking" class="mx-[18px]" />
           Surfing
         </li>
       </ul>
-
-      <!-- Card -->
-      <div class="container pb-[5px]">
-        <h2 class="mb-3 text-xl font-bold">Recommendations for You</h2>
-        <!-- CardCover -->
-        <div class="relative mb-2">
-          <img
-            src="../assets/img/homepage/homepage01.jpg"
-            alt="homepage01"
-            class="rounded-2xl"
-          />
-          <button
-            class="absolute right-4 top-4 flex size-12 items-center justify-center rounded-full bg-white bg-opacity-50"
-          >
-            <box-icon name="heart" type="solid" color="#ffffff"></box-icon>
-          </button>
-        </div>
-        <!-- CardContent -->
-        <div class="space-y-1 text-sm">
-          <!-- title -->
-          <div class="flex justify-between">
-            <h3 class="text-base font-bold">North Coast Exploration</h3>
-            <div class="flex items-center gap-x-1">
-              <box-icon
-                type="solid"
-                name="star"
-                color="#FFDA44"
-                class="mb-[0.4px] size-4"
-              ></box-icon>
-              <span class="font-semibold">4.9</span>
-              <span class="text-neutral-400">(145)</span>
-            </div>
-          </div>
-
-          <!-- tags -->
-          <ul class="flex gap-x-1 text-brand-800">
-            <li>
-              <a href="#" class="rounded-full bg-brand-300 px-2">
-                Outdoor activities
-              </a>
-            </li>
-            <li>
-              <a href="#" class="rounded-full bg-brand-100 px-2">Nature</a>
-            </li>
-            <li>
-              <a href="#" class="rounded-full bg-brand-100 px-2">Beach walk</a>
-            </li>
-          </ul>
-
-          <!-- date -->
-          <p class="text-neutral-500">Aug 21 – 25</p>
-
-          <!-- price -->
-          <div class="flex gap-x-0.5">
-            <p class="font-semibold">$ 715 TWD</p>
-            <p>/ person</p>
-          </div>
-        </div>
-      </div>
     </section>
 
+    <%- include('./src/components/cardCoverSwiper.ejs'); -%>
+
     <footer
-      class="fixed bottom-0 left-0 z-50 w-full border-t border-neutral-100 shadow-md"
+      class="fixed bottom-0 left-0 z-50 w-full border-t border-neutral-100"
     >
       <ul
-        class="flex justify-center bg-white px-2 py-1 text-[10px] text-neutral-300"
+        class="flex justify-center bg-white px-2 py-1 text-[10px] font-semibold text-neutral-300"
       >
         <li class="flex flex-col items-center gap-y-1 py-2 text-black">
-          <box-icon name="search-alt-2" class="mx-6"></box-icon>
+          <i class="bx bx-search-alt-2 mx-6 text-2xl leading-6"></i>
           Explore
         </li>
         <li class="flex flex-col items-center gap-y-1 py-2">
-          <box-icon name="heart" color="#AEB2B1" class="mx-6"></box-icon>
+          <i class="bx bx-heart mx-6 text-2xl leading-6"></i>
           Wishlists
         </li>
         <li class="flex flex-col items-center gap-y-1 py-2">
@@ -171,7 +116,7 @@
           Messages
         </li>
         <li class="flex flex-col items-center gap-y-1 py-2">
-          <box-icon name="user" color="#AEB2B1" class="mx-6"></box-icon>
+          <i class="bx bx-user mx-6 text-2xl leading-6"></i>
           Profile
         </li>
       </ul>
