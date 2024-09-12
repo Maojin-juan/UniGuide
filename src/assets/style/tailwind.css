@@ -10,6 +10,13 @@
 
 @layer components {
   /* 自組元件 */
+  .swiper-container .swiper-pagination-bullet {
+    @apply !mx-0.5 size-1.5 rounded-full bg-white opacity-[66%];
+  }
+
+  .swiper-container .swiper-pagination-bullet-active {
+    @apply opacity-100;
+  }
 }
 
 @layer utilities {

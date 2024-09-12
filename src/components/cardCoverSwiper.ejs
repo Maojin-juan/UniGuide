@@ -1,0 +1,270 @@
+<%
+  const SwiperNum = 6;
+
+  const images = [
+    { src: "../assets/img/homepage/homepage01.jpg", alt: "homepage01" },
+    { src: "../assets/img/homepage/homepage02.jpg", alt: "homepage02" },
+    { src: "../assets/img/homepage/homepage03.jpg", alt: "homepage03" },
+    { src: "../assets/img/homepage/homepage04.jpg", alt: "homepage04" },
+  ];
+
+  const createImageArray = (image, num) => Array(num).fill(image);
+
+  const images1 = createImageArray(images[0], SwiperNum);
+  const images2 = createImageArray(images[1], SwiperNum);
+  const images3 = createImageArray(images[2], SwiperNum);
+  const images4 = createImageArray(images[3], SwiperNum);
+%>
+<section class="container">
+  <h2 class="mb-3 text-xl font-bold">Recommendations for You</h2>
+  <div class="space-y-6">
+    <div>
+      <!-- CardCoverSwiper -->
+      <div class="swiper-container relative overflow-hidden">
+        <ul class="swiper-wrapper">
+          <% images1.forEach(function(image) { %>
+            <li class="swiper-slide">
+              <img
+                src="<%= image.src %>"
+                alt="<%= image.alt %>"
+                class="rounded-2xl"
+              />              
+            </li>
+          <% }); %>
+        </ul>
+        <button
+          class="absolute z-10 right-4 top-4 flex size-12 items-center justify-center rounded-full bg-white bg-opacity-50"
+        >
+          <i class="text-2xl text-white bx bxs-heart hover:text-red-500 transition-all"></i>
+        </button>
+        <!-- SwiperPagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- CardContent -->
+      <div class="space-y-1 text-sm">
+        <!-- title -->
+        <div class="flex justify-between">
+          <h3 class="text-base font-bold">North Coast Exploration</h3>
+          <div class="flex items-center gap-x-1">
+            <box-icon
+              type="solid"
+              name="star"
+              color="#FFDA44"
+              class="mb-[0.4px] size-4"
+            ></box-icon>
+            <span class="font-semibold">4.9</span>
+            <span class="text-neutral-400">(145)</span>
+          </div>
+        </div>
+        <!-- tags -->
+        <ul class="flex gap-x-1 text-brand-800">
+          <li>
+            <a href="#" class="rounded-full bg-brand-300 px-2">
+              Outdoor activities
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">Nature</a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">Beach walk</a>
+          </li>
+        </ul>
+        <!-- date -->
+        <p class="text-neutral-500">Aug 21 – 25</p>
+        <!-- price -->
+        <div class="flex gap-x-0.5">
+          <p class="font-semibold">$ 715 TWD</p>
+          <p>/ person</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- CardCoverSwiper -->
+      <div class="swiper-container relative overflow-hidden">
+        <ul class="swiper-wrapper">
+          <% images2.forEach(function(image) { %>
+            <li class="swiper-slide">
+              <img
+                src="<%= image.src %>"
+                alt="<%= image.alt %>"
+                class="rounded-2xl"
+              />              
+            </li>
+          <% }); %>
+        </ul>
+        <button
+          class="absolute z-10 right-4 top-4 flex size-12 items-center justify-center rounded-full bg-white bg-opacity-50"
+        >
+          <i class="text-2xl text-white bx bxs-heart hover:text-red-500 transition-all"></i>
+        </button>
+        <!-- SwiperPagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- CardContent -->
+      <div class="space-y-1 text-sm">
+        <!-- title -->
+        <div class="flex justify-between">
+          <h3 class="text-base font-bold">Sea of Clouds in Mountains</h3>
+          <div class="flex items-center gap-x-1">
+            <box-icon
+              type="solid"
+              name="star"
+              color="#FFDA44"
+              class="mb-[0.4px] size-4"
+            ></box-icon>
+            <span class="font-semibold">4.2</span>
+            <span class="text-neutral-400">(210)</span>
+          </div>
+        </div>
+        <!-- tags -->
+        <ul class="flex gap-x-1 text-brand-800">
+          <li>
+            <a href="#" class="rounded-full bg-brand-300 px-2">
+              Nature
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">Hiking</a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">Sunrise</a>
+          </li>
+        </ul>
+        <!-- date -->
+        <p class="text-neutral-500">Sep 3 </p>
+        <!-- price -->
+        <div class="flex gap-x-0.5">
+          <p class="font-semibold">$ 715 TWD</p>
+          <p>/ person</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mb-3 text-xl font-bold">Explore More</h2>
+  <div class="space-y-6">
+    <div>
+      <!-- CardCoverSwiper -->
+      <div class="swiper-container relative overflow-hidden">
+        <ul class="swiper-wrapper">
+          <% images3.forEach(function(image) { %>
+            <li class="swiper-slide">
+              <img
+                src="<%= image.src %>"
+                alt="<%= image.alt %>"
+                class="rounded-2xl"
+              />
+            </li>
+          <% }); %>
+        </ul>
+        <button
+          class="absolute z-10 right-4 top-4 flex size-12 items-center justify-center rounded-full bg-white bg-opacity-50"
+        >
+          <i class="text-2xl text-white bx bxs-heart hover:text-red-500 transition-all"></i>
+        </button>
+        <!-- SwiperPagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- CardContent -->
+      <div class="space-y-1 text-sm">
+        <!-- title -->
+        <div class="flex justify-between">
+          <h3 class="text-base font-bold">Local Cuisine Tour</h3>
+          <div class="flex items-center gap-x-1">
+            <box-icon
+              type="solid"
+              name="star"
+              color="#FFDA44"
+              class="mb-[0.4px] size-4"
+            ></box-icon>
+            <span class="font-semibold">4.1</span>
+            <span class="text-neutral-400">(145)</span>
+          </div>
+        </div>
+        <!-- tags -->
+        <ul class="flex gap-x-1 text-brand-800">
+          <li>
+            <a href="#" class="rounded-full bg-brand-300 px-2">
+              Food
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">Culture</a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">DIY</a>
+          </li>
+        </ul>
+        <!-- date -->
+        <p class="text-neutral-500">Aug 23</p>
+        <!-- price -->
+        <div class="flex gap-x-0.5">
+          <p class="font-semibold">$ 715 TWD</p>
+          <p>/ person</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- CardCoverSwiper -->
+      <div class="swiper-container relative overflow-hidden">
+        <ul class="swiper-wrapper">
+          <% images4.forEach(function(image) { %>
+            <li class="swiper-slide">
+              <img
+                src="<%= image.src %>"
+                alt="<%= image.alt %>"
+                class="rounded-2xl"
+              />
+            </li>
+          <% }); %>
+        </ul>
+        <button
+          class="absolute z-10 right-4 top-4 flex size-12 items-center justify-center rounded-full bg-white bg-opacity-50"
+        >
+          <i class="text-2xl text-white bx bxs-heart hover:text-red-500 transition-all"></i>
+        </button>
+        <!-- SwiperPagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- CardContent -->
+      <div class="space-y-1 text-sm">
+        <!-- title -->
+        <div class="flex justify-between">
+          <h3 class="text-base font-bold">Lanterns Painting</h3>
+          <div class="flex items-center gap-x-1">
+            <box-icon
+              type="solid"
+              name="star"
+              color="#FFDA44"
+              class="mb-[0.4px] size-4"
+            ></box-icon>
+            <span class="font-semibold">4.8</span>
+            <span class="text-neutral-400">(256)</span>
+          </div>
+        </div>
+        <!-- tags -->
+        <ul class="flex gap-x-1 text-brand-800">
+          <li>
+            <a href="#" class="rounded-full bg-brand-300 px-2">
+              Handicraft
+            </a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">Arts</a>
+          </li>
+          <li>
+            <a href="#" class="rounded-full bg-brand-100 px-2">DIY</a>
+          </li>
+        </ul>
+        <!-- date -->
+        <p class="text-neutral-500">Aug 21 – 27</p>
+        <!-- price -->
+        <div class="flex gap-x-0.5">
+          <p class="font-semibold">$ 650 TWD </p>
+          <p>/ person</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
