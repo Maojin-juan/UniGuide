@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>page 4</title>
+  <!-- swiper  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -50,18 +52,20 @@
       <ul class="flex items-center gap-2 whitespace-nowrap">
         <li class="">
           <a href="#">
-            <i class='bx bx-slider-alt bx-xs bx-border-circle p-2 border-neutral-300 hover:text-brand-700
-                  hover:bg-brand-50
-                  hover:border-brand-600
-                  focus:text-brand-700
-                  focus:bg-brand-50
-                  focus:border-brand-600
-                  focus:outline-none
-    
-                  active:border-brand-600
-                  dark:bg-brand-400
-                  dark:hover:bg-brand-500
-                  dark:focus:ring-brand-60'></i>
+            <i class='bx bx-slider-alt bx-xs bx-border-circle p-2 
+            border-neutral-300 
+            hover:text-brand-700
+            hover:bg-brand-50
+            hover:border-brand-600
+            focus:text-brand-700
+            focus:bg-brand-50
+            focus:border-brand-600
+            focus:outline-none
+
+            active:border-brand-600
+            dark:bg-brand-400
+            dark:hover:bg-brand-500
+            dark:focus:ring-brand-60'></i>
           </a>
         </li>
         <!-- Languages -->
@@ -79,9 +83,12 @@
                     border
                     border-neutral-300
                     text-neutral-900
-                    hover:text-brand-700
-                    hover:bg-brand-50
-                    hover:border-brand-600
+
+                   text-brand-700
+                   bg-brand-50
+                   border-brand-600
+
+
                     focus:text-brand-700
                     focus:bg-brand-50
                     focus:border-brand-600
@@ -447,53 +454,205 @@
     <!-- tabs content TOUR  -->
     <div class="hidden py-4 dark:bg-gray-800" id="tour" role="tabpanel" aria-labelledby="tour-tab">
       <ul class="flex flex-wrap -mx-2 gap-y-4">
+        <!-- 1 -->
         <li class="w-1/2 px-2">
           <div class="relative">
-            <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/img.png" alt="">
-            <a href="#" class="absolute top-0 right-0 mt-3 mr-3">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/searchresult/searchresult00.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="#" class="absolute top-0 right-0 mt-3 mr-3 z-10">
               <i class='bx bx-heart text-xl leading-none rounded-full p-1.5 bg-white opacity-70'></i>
             </a>
           </div>
-          <p>The Secret Stream Trekking Experience</p>
-          <p>$1,050 TWD <span>/ person </span></p>
-          <i class='bx bxs-star'></i>
-          <span>4.9 (145)</span>
+          <div class="flex flex-col gap-1 mt-3">
+            <p class="text-xs leading-[18px] font-bold">The Secret Stream Trekking Experience</p>
+            <p class="text-xs/5 font-semibold">$1,050 TWD <span class="font-normal">/ person </span></p>
+            <div class="flex items-center gap-1">
+              <i class='bx bxs-star'></i>
+              <span class="text-xs/5 font-semibold text-neutral-500 text-justify">4.9 (145)</span>
+            </div>
+          </div>
         </li>
+        <!-- 2 -->
         <li class="w-1/2 px-2">
           <div class="relative">
-            <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/img.png" alt="">
-            <a href="#" class="absolute top-0 right-0 mt-3 mr-3">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/searchresult/searchresult04.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="#" class="absolute top-0 right-0 mt-3 mr-3 z-10">
+              <i class='bx bxs-heart text-xl leading-none rounded-full p-1.5 bg-white/50 text-white'></i>
+            </a>
+          </div>
+          <div class="flex flex-col gap-1 mt-3">
+            <p class="text-xs leading-[18px] font-bold">Jiufen Tour</p>
+            <p class="text-xs/5 font-semibold">$1,200 TWD <span class="font-normal">/ person </span></p>
+            <div class="flex items-center gap-1">
+              <i class='bx bxs-star'></i>
+              <span class="text-xs/5 font-semibold text-neutral-500 text-justify">4.3 (250)</span>
+            </div>
+          </div>
+        </li>
+        <!-- 3 -->
+        <li class="w-1/2 px-2">
+          <div class="relative">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/searchresult/searchresult05.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="#" class="absolute top-0 right-0 mt-3 mr-3 z-10">
+              <i class='bx bxs-heart text-xl leading-none rounded-full p-1.5  bg-white/50 text-white'></i>
+            </a>
+          </div>
+          <div class="flex flex-col gap-1 mt-3">
+            <p class="text-xs leading-[18px] font-bold">Sea of Clouds in Mountains</p>
+            <p class="text-xs/5 font-semibold">$850 TWD <span class="font-normal">/ person </span></p>
+            <div class="flex items-center gap-1">
+              <i class='bx bxs-star'></i>
+              <span class="text-xs/5 font-semibold text-neutral-500 text-justify">4.2 (210)</span>
+            </div>
+          </div>
+        </li>
+        <!-- 4 -->
+        <li class="w-1/2 px-2">
+          <div class="relative">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/searchresult/searchresult01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="#" class="absolute top-0 right-0 mt-3 mr-3 z-10">
+              <i class='bx bxs-heart text-xl leading-none rounded-full p-1.5  bg-white/50 text-white'></i>
+            </a>
+          </div>
+          <div class="flex flex-col gap-1 mt-3">
+            <p class="text-xs leading-[18px] font-bold">Alishan Hidden Gem</p>
+            <p class="text-xs/5 font-semibold">$100 TWD <span class="font-normal">/ person </span></p>
+            <div class="flex items-center gap-1">
+              <i class='bx bxs-star'></i>
+              <span class="text-xs/5 font-semibold text-neutral-500 text-justify">4.2 (125)</span>
+            </div>
+          </div>
+        </li>
+        <!-- 5 -->
+        <li class="w-1/2 px-2">
+          <div class="relative">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/searchresult/searchresult00.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="https://fakeimg.pl/156x156/" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="#" class="absolute top-0 right-0 mt-3 mr-3 z-10">
               <i class='bx bxs-heart text-xl leading-none rounded-full p-1.5 bg-white bg-opacity-50 text-white'></i>
             </a>
           </div>
-          <p>The Secret Stream Trekking Experience</p>
-          <p>$1,050 TWD <span>/ person </span></p>
-          <i class='bx bxs-star'></i>
-          <span>4.9 (145)</span>
-        </li>
-        <li class="w-1/2 px-2">
-          <div class="relative">
-            <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/img.png" alt="">
-            <a href="#" class="absolute top-0 right-0 mt-3 mr-3">
-              <i class='bx bxs-heart text-xl leading-none rounded-full p-1.5 bg-white bg-opacity-50 text-white'></i>
-            </a>
+          <div class="flex flex-col gap-1 mt-3">
+            <p class="text-xs leading-[18px] font-bold">The Secret Stream Trekking Experience</p>
+            <p class="text-xs/5 font-semibold">$1,050 TWD <span class="font-normal">/ person </span></p>
+            <div class="flex items-center gap-1">
+              <i class='bx bxs-star'></i>
+              <span class="text-xs/5 font-semibold text-neutral-500 text-justify">4.9 (145)</span>
+            </div>
           </div>
-          <p>The Secret Stream Trekking Experience</p>
-          <p>$1,050 TWD <span>/ person </span></p>
-          <i class='bx bxs-star'></i>
-          <span>4.9 (145)</span>
-        </li>
-        <li class="w-1/2 px-2">
-          <div class="relative">
-            <img class="rounded-2xl w-[156px] h-[156px] object-cover" src="../assets/images/img.png" alt="">
-            <a href="#" class="absolute top-0 right-0 mt-3 mr-3">
-              <i class='bx bxs-heart text-xl leading-none rounded-full p-1.5 bg-white bg-opacity-50 text-white'></i>
-            </a>
-          </div>
-          <p>The Secret Stream Trekking Experience</p>
-          <p>$1,050 TWD <span>/ person </span></p>
-          <i class='bx bxs-star'></i>
-          <span>4.9 (145)</span>
         </li>
       </ul>
     </div>
@@ -512,7 +671,8 @@
   <footer
     class="fixed bottom-0 left-0 z-20 w-full py-1 px-2  bg-white border-t border-gray-200 shadow dark:bg-gray-800 dark:border-gray-600">
     <div class="container">
-      <ul class="flex flex-wrap items-center justify-between text-xxs font-medium text-neutral-300 dark:text-gray-400 sm:mt-0">
+      <ul
+        class="flex flex-wrap items-center justify-between text-xxs font-medium text-neutral-300 dark:text-gray-400 sm:mt-0">
         <li class="text-center">
           <a href="#" class="block p-2 active text-neutral-950">
             <i class='bx bx-search-alt-2 bx-sm mb-1'></i>
@@ -550,6 +710,16 @@
     </div>
   </footer>
   <script type="module" src="../main.js"></script>
+  <!-- swiper  -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 
 </html>
