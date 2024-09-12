@@ -3,5 +3,13 @@
   "htmlWhitespaceSensitivity": "ignore",
   "tabWidth": 2,
   "tailwindConfig": "./tailwind.config.js",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.ejs",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
 }
