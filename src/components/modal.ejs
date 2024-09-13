@@ -1,0 +1,203 @@
+<div
+  id="drawer-left-example"
+  class="fixed left-0 top-0 z-10 h-screen w-full -translate-x-full overflow-y-auto bg-white px-6 text-[#141515] transition-transform"
+  tabindex="-1"
+  aria-labelledby="drawer-left-label"
+>
+  <div class="space-y-4">
+    <button
+      type="button"
+      data-drawer-hide="drawer-left-example"
+      aria-controls="drawer-left-example"
+      class="flex items-center justify-center py-3"
+    >
+      <i class="bx bx-left-arrow-alt text-2xl leading-6"></i>
+      <span class="sr-only">Close menu</span>
+    </button>
+
+    <div class="relative">
+      <button
+        type="button"
+        id="dropdownDefaultButton"
+        data-dropdown-toggle="dropdown"
+        class="flex w-full items-center justify-between rounded-[14px] px-5 py-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+          <p>Where</p>
+        </div>
+        <p class="text-sm font-semibold">Current location</p>
+      </button>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown"
+        class="z-10 hidden w-full !-translate-y-0 space-y-3 divide-gray-100 rounded-lg bg-white shadow"
+      >
+        <div class="mx-2 mt-2 rounded-2xl border border-neutral-100">
+          <label
+            for="location-search"
+            class="sr-only text-sm font-medium text-gray-900"
+          >
+            location-search
+          </label>
+          <div class="flex items-center gap-x-2 rounded-xl px-4">
+            <i class="bx bx-search text-2xl leading-6"></i>
+            <input
+              type="search"
+              id="location-search"
+              class="w-full border-none bg-white px-0 py-2 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
+              placeholder="Where to?"
+              required
+            />
+            <button class="close-dropdown h-[22px] w-5">
+              <i
+                class="bx bxs-x-circle text-xl leading-[22px] text-[#3C3C4399] opacity-60"
+              ></i>
+            </button>
+          </div>
+        </div>
+        <div class="space-y-3 px-5">
+          <div>
+            <p class="text-xs text-neutral-400">Recent</p>
+            <ul
+              class="space-y-1 text-sm text-gray-700"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
+                  ></i>
+                  Taiwan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
+                  ></i>
+                  Tokyo
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs text-neutral-400">Popular</p>
+            <ul
+              class="space-y-1 text-sm text-gray-700"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
+                  ></i>
+                  Bangkok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
+                  ></i>
+                  Canada
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
+                  ></i>
+                  Eroupe
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Date picker -->
+    <div class="relative max-w-sm">
+      <div
+        class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5"
+      ></div>
+      <button
+        type="button"
+        class="flex w-full items-center justify-between rounded-[18px] px-5 py-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-calendar text-2xl leading-6"></i>
+          <p>When</p>
+        </div>
+        <p class="text-sm font-semibold">From tomorrow</p>
+      </button>
+    </div>
+
+    <button
+      type="button"
+      class="flex w-full items-center justify-between rounded-[18px] px-5 py-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+    >
+      <div class="flex gap-x-2">
+        <i class="bx bx-user-pin text-2xl leading-6"></i>
+        <p>Who</p>
+      </div>
+      <p class="text-sm font-semibold">Only me</p>
+    </button>
+    <div class="hidden">
+      <label
+        for="date-selector"
+        class="sr-only text-sm font-medium text-gray-900"
+      >
+        dateSelector
+      </label>
+      <div
+        class="-mb-px flex items-center gap-x-2 rounded-xl px-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+        <input
+          type="search"
+          id="date-selector"
+          class="w-full border-none bg-white px-0 py-4 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
+          placeholder="Where to?"
+          required
+        />
+      </div>
+    </div>
+    <div class="hidden">
+      <label
+        for="members-selector"
+        class="sr-only text-sm font-medium text-gray-900"
+      >
+        membersSelector
+      </label>
+      <div
+        class="-mb-px flex items-center gap-x-2 rounded-xl px-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+        <input
+          type="search"
+          id="members-selector"
+          class="w-full border-none bg-white px-0 py-4 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
+          placeholder="Where to?"
+          required
+        />
+      </div>
+    </div>
+  </div>
+</div>

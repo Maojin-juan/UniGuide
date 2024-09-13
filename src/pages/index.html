@@ -9,24 +9,19 @@
     <nav class="fixed left-0 top-0 z-50 w-full bg-white">
       <!-- SearchInput -->
       <div class="container">
-        <label
-          for="default-search"
-          class="sr-only text-sm font-medium text-gray-900"
-        >
-          Search
-        </label>
-        <div
-          class="-mb-px flex items-center gap-x-2 rounded-lg px-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+        <button
+          type="button"
+          class="flex w-full items-center gap-x-2 rounded-[14px] px-5 py-4 font-semibold text-[#141515] shadow-[0px_6px_12px_-4px_#0000001A]"
+          data-drawer-target="drawer-left-example"
+          data-drawer-show="drawer-left-example"
+          data-drawer-placement="left"
+          aria-controls="drawer-left-example"
         >
           <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
-          <input
-            type="search"
-            id="default-search"
-            class="w-full border-none bg-white px-0 py-4 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
-            placeholder="Where to?"
-            required
-          />
-        </div>
+          Where to?
+        </button>
+
+        <%- include('./src/components/modal.ejs'); -%>
       </div>
 
       <!-- Tabs -->
@@ -114,7 +109,7 @@
     <%- include('./src/components/cardSwiper.ejs'); -%>
 
     <footer
-      class="fixed bottom-0 left-0 z-50 w-full border-t border-neutral-100"
+      class="fixed bottom-0 left-0 z-40 w-full border-t border-neutral-100"
     >
       <ul
         class="flex justify-center bg-white px-2 py-1 text-[10px] font-semibold text-neutral-300"
