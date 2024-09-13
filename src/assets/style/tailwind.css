@@ -24,4 +24,9 @@
   .bxs-star {
     color: #FFDA44;
   }
+
+  #tour .swiper-slide::after {
+    @apply absolute inset-0 bg-gradient-to-bl from-neutral-950 to-transparent opacity-20 rounded-2xl;
+    content: '';
+  }
 }
