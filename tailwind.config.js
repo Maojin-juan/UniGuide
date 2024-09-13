@@ -20,6 +20,7 @@ export default {
           700: '#344054',
           800: '#1D2939',
           900: '#101828',
+          950: '#141515',
           'surface': '#E7F9F4',
           'light': '#60D6B5',
           'main': '#11C291',
@@ -44,6 +45,7 @@ export default {
           main: '#FD7682',
           dark: '#FFEEEF',
         },
+        'yellow-300': '#FFDA44'
       },
 
       fontFamily: {
@@ -73,7 +75,9 @@ export default {
         'md': '0px 4px 6px -2px #00000008, 0px 12px 16px -4px #00000014',
         'lg': '0px 8px 8px -4px #00000008, 0px 20px 24px -4px #00000014',
         'xl': '0px 24px 48px -12px #0000002E',
-        'xxl': '0px 32px 64px -12px #00000024',  
+        'xxl': '0px 32px 64px -12px #00000024',
+        'bottom-cta': '0px -4px 16px -2px #0000000D',
+  
       },
       borderWidth: {
         '3': '3px',
