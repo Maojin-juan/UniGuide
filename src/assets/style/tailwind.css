@@ -12,6 +12,10 @@
   *, *::before, *::after {
     outline: 1px solid red;
   }
+
+  body {
+    @apply text-neutral-950;
+  }
 }
 
 @layer components {
