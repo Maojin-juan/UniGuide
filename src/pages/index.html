@@ -5,130 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
   </head>
-  <body>
-    <div class="container">
-      <nav>
-        <label
-          for="default-search"
-          class="sr-only mb-2 text-sm font-medium text-gray-900"
+  <body class="pb-[73px] pt-28">
+    <nav class="fixed left-0 top-0 z-50 w-full bg-white">
+      <!-- SearchInput -->
+      <div class="container">
+        <button
+          type="button"
+          class="flex w-full items-center gap-x-2 rounded-full px-5 py-4 font-semibold text-[#141515] shadow-[0px_6px_12px_-4px_#0000001A]"
+          data-drawer-target="drawer-left-example"
+          data-drawer-show="drawer-left-example"
+          data-drawer-placement="left"
+          aria-controls="drawer-left-example"
         >
-          Search
-        </label>
-        <div>
-          <input
-            type="search"
-            id="default-search"
-            class="block w-full rounded-lg border-none bg-white p-4 text-sm shadow-[0px_6px_12px_-4px_#0000001A] focus:border-[#858B8A] focus:ring-[#858B8A]"
-            placeholder="Where to?"
-            required
-          />
-        </div>
-      </nav>
-    </div>
+          <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+          Where to?
+        </button>
 
-    <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+        <%- include('./src/components/modal.ejs'); -%>
+      </div>
+
+      <!-- Tabs -->
+      <div class="mt-2 border-b border-neutral-100 text-center font-semibold">
+        <ul class="container -mb-px flex px-0">
+          <li class="relative w-full">
+            <a
+              href="#"
+              class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
+            >
+              Tour
+            </a>
+          </li>
+          <li class="relative w-full">
+            <a
+              href="#"
+              class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
+              aria-current="page"
+            >
+              Meet-up
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <!-- FeatureList -->
       <ul
-        class="-mb-px flex flex-wrap text-center text-sm font-medium"
-        id="default-styled-tab"
-        data-tabs-toggle="#default-styled-tab-content"
-        data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500"
-        data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
-        role="tablist"
+        class="flex justify-center gap-x-2 pb-4 pt-2 text-[11px] font-bold leading-[16.5px] text-neutral-400"
       >
-        <li class="me-2" role="presentation">
-          <button
-            class="inline-block rounded-t-lg border-b-2 p-4"
-            id="profile-styled-tab"
-            data-tabs-target="#styled-profile"
-            type="button"
-            role="tab"
-            aria-controls="profile"
-            aria-selected="false"
-          >
-            Tour
-          </button>
+        <li>
+          <a href="#" class="flex flex-col items-center gap-y-1.5">
+            <i
+              class="bx bx-leaf mx-[18px] text-2xl leading-6 text-neutral-400"
+            ></i>
+            Natural
+          </a>
         </li>
-        <li class="me-2" role="presentation">
-          <button
-            class="inline-block rounded-t-lg border-b-2 p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
-            id="dashboard-styled-tab"
-            data-tabs-target="#styled-dashboard"
-            type="button"
-            role="tab"
-            aria-controls="dashboard"
-            aria-selected="false"
+        <li>
+          <a href="#" class="flex flex-col items-center gap-y-1.5">
+            <i
+              class="bx bx-restaurant mx-[18px] text-2xl leading-6 text-neutral-400"
+            ></i>
+            Local cuisine
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-col items-center gap-y-1.5">
+            <i
+              class="bx bx-palette mx-[18px] text-2xl leading-6 text-neutral-400"
+            ></i>
+            Arts
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex flex-col items-center justify-between gap-y-1.5"
           >
-            Meet-up
-          </button>
+            <img
+              src="../assets/svg/Hiking.svg"
+              alt="Hiking"
+              class="mx-[18px]"
+            />
+            Hiking
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex flex-col items-center justify-between gap-y-1.5"
+          >
+            <img
+              src="../assets/svg/Surfing.svg"
+              alt="Hiking"
+              class="mx-[18px]"
+            />
+            Surfing
+          </a>
         </li>
       </ul>
-    </div>
-    <div id="default-styled-tab-content">
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-profile"
-        role="tabpanel"
-        aria-labelledby="profile-tab"
+    </section>
+
+    <%- include('./src/components/cardSwiper.ejs'); -%>
+
+    <footer
+      class="fixed bottom-0 left-0 z-40 w-full border-t border-neutral-100"
+    >
+      <ul
+        class="flex justify-center bg-white px-2 py-1 text-[10px] font-semibold text-neutral-300"
       >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Profile tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-dashboard"
-        role="tabpanel"
-        aria-labelledby="dashboard-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Dashboard tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-settings"
-        role="tabpanel"
-        aria-labelledby="settings-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Settings tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-      <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
-        id="styled-contacts"
-        role="tabpanel"
-        aria-labelledby="contacts-tab"
-      >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
-            Contacts tab's associated content
-          </strong>
-          . Clicking another tab will toggle the visibility of this one for the
-          next. The tab JavaScript swaps classes to control the content
-          visibility and styling.
-        </p>
-      </div>
-    </div>
+        <li>
+          <a
+            href="#"
+            class="flex flex-col items-center gap-y-1 py-2 text-black"
+          >
+            <i class="bx bx-search-alt-2 mx-6 text-2xl leading-6"></i>
+            Explore
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
+            <i class="bx bx-heart mx-6 text-2xl leading-6"></i>
+            Wishlists
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
+            <img src="../assets/svg/Order.svg" alt="Order" class="mx-6" />
+            Orders
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
+            <img
+              src="../assets/svg/LogoNoFeet.svg"
+              alt="LogoNoFeet"
+              class="mx-6"
+            />
+            Messages
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
+            <i class="bx bx-user mx-6 text-2xl leading-6"></i>
+            Profile
+          </a>
+        </li>
+      </ul>
+    </footer>
 
     <script type="module" src="../main.js"></script>
   </body>

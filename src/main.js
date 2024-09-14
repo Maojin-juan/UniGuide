@@ -1,6 +1,5 @@
 import "flowbite/dist/flowbite.min.js";
 import "boxicons/css/boxicons.min.css";
-import "boxicons";
 
 import "./assets/style/tailwind.css";
 import "./assets/style/style.css";
@@ -37,3 +36,6 @@ document.querySelectorAll(".readButton").forEach((button) => {
     }
   });
 });
+
+import "./js/carousel";
+import "./js/dropdown";

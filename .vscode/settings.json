@@ -17,6 +17,9 @@
   "editor.wordWrap": "on" /*文字換行*/,
   "editor.defaultFormatter": "esbenp.prettier-vscode" /*預設格式化工具*/,
   "editor.tabSize": 2 /*tab 空白字元數*/,
+  "editor.quickSuggestions": {
+    "strings": true // 控制在輸入時是否顯示快速建議
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode" /*在html使用prettier format*/
   },
