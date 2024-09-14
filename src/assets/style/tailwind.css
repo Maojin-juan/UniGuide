@@ -21,4 +21,7 @@
 
 @layer utilities {
   /* 自組樣式 */
+  .dropmenu-checkbox:checked + .datepicker {
+    @apply max-h-[300px];
+  }
 }
