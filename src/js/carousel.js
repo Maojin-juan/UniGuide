@@ -4,13 +4,13 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 
-const swiper = new Swiper(".swiper-container", {
+const swiper = new Swiper(".mySwiper", {
   modules: [Pagination, Autoplay],
   slidesPerView: 1,
   spaceBetween: 24,
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 1000,
   },
   pagination: {
     el: ".swiper-pagination",

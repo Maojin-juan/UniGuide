@@ -19,12 +19,12 @@
 
 @layer components {
   /* 自組元件 */
-  .swiper-container .swiper-pagination-bullet {
-    @apply !mx-0.5 size-1.5 rounded-full bg-white opacity-[66%];
+  .mySwiper .swiper-pagination-bullet {
+    @apply !mx-0.5 size-1.5 rounded-full bg-[#E6E7E7A8] opacity-100;
   }
 
-  .swiper-container .swiper-pagination-bullet-active {
-    @apply opacity-100;
+  .mySwiper .swiper-pagination-bullet-active {
+    @apply bg-white;
   }
 }
 
@@ -41,5 +41,20 @@
 
   .dropmenu-checkbox:checked + .datepicker {
     @apply max-h-[300px];
+  }
+
+  .truncate-multi-line {
+    @apply overflow-hidden text-ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    /* 限制顯示5行 */
+  }
+
+  .expanded {
+    @apply overflow-visible;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
   }
 }

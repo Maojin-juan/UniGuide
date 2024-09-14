@@ -2,7 +2,6 @@ import "flowbite/dist/flowbite.min.js";
 import "boxicons/css/boxicons.min.css";
 
 import "./assets/style/tailwind.css";
-import "./assets/style/style.css";
 
 // show more、show less button
 document.getElementById("showButton").addEventListener("click", function () {
