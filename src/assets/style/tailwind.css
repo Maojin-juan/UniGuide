@@ -6,11 +6,11 @@
 
 @layer base {
   /* 擴充專案的全站樣式 */
-  *,
+  /* *,
   *::before,
   *::after {
     outline: 1px solid red;
-  }
+  } */
 
   body {
     @apply text-neutral-950;
