@@ -37,5 +37,5 @@ document.querySelectorAll(".readButton").forEach((button) => {
 });
 
 import "./js/carousel";
-import "./js/dropdown";
+import "./js/collapse";
 import "./js/datepicker";
