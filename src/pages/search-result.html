@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>page 4</title>
+    <!-- tailwind： 沒先載入的話，drawer 在頁面載入時，會閃爍一下 -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-
   <body>
     <div class="fixed start-0 top-0 z-20 w-full bg-white">
       <!-- 搜尋框 -->
@@ -21,12 +22,12 @@
             <div
               class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-6"
             >
-              <box-icon name="search-alt-2"></box-icon>
+              <i class="bx bx-search-alt-2 text-2xl leading-none"></i>
             </div>
             <input
               type="search"
               id="default-search"
-              class="shadow-xs block w-full rounded-full border border-0 p-3.5 ps-14 text-sm font-semibold text-gray-900 focus:border-neutral-950 focus:ring-neutral-950 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              class="block w-full rounded-full border border-0 p-3.5 ps-14 text-sm font-semibold text-gray-900 shadow-xs focus:border-neutral-950 focus:ring-neutral-950 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               value="Taiwan"
               placeholder=""
               required
@@ -47,7 +48,7 @@
           >
             <li class="w-1/2" role="presentation">
               <button
-                class="border-b-3 inline-block rounded-t-lg p-2"
+                class="inline-block border-b-3 p-2"
                 id="tour-tab"
                 data-tabs-target="#tour"
                 type="button"
@@ -60,7 +61,7 @@
             </li>
             <li class="w-1/2" role="presentation">
               <button
-                class="hover:border-b-3 inline-block rounded-t-lg p-2 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
+                class="inline-block border-b-3 p-2"
                 id="dashboard-styled-tab"
                 data-tabs-target="#styled-dashboard"
                 type="button"
@@ -77,99 +78,45 @@
       <!-- 篩選按鈕 -->
       <div class="container overflow-x-scroll py-2">
         <ul class="flex items-center gap-2 whitespace-nowrap">
-          <li class="">
-            <a href="#">
+          <!-- filter button  -->
+          <li>
+            <button
+              data-drawer-target="drawer-bottom-1"
+              data-drawer-show="drawer-bottom-1"
+              data-drawer-placement="bottom"
+              aria-controls="drawer-bottom-1"
+              type="button"
+            >
               <i
                 class="bx bx-slider-alt bx-xs bx-border-circle dark:focus:ring-brand-60 border-neutral-300 p-2 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
               ></i>
-            </a>
+            </button>
           </li>
           <!-- Languages -->
           <li>
             <!-- Languages button -->
             <button
-              id="dropdownBgHoverButton1"
-              data-dropdown-toggle="dropdownBgHover1"
+              data-drawer-target="drawer-bottom-2"
+              data-drawer-show="drawer-bottom-2"
+              data-drawer-placement="bottom"
+              aria-controls="drawer-bottom-2"
+              type="button"
               class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-brand-600 bg-brand-50 px-4 py-1.5 text-center text-sm font-medium text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
               type="button"
             >
               Language
               <span class="ms-2">(2)</span>
             </button>
-            <!-- Languages Dropdown menu -->
-            <div
-              id="dropdownBgHover1"
-              class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
-            >
-              <ul
-                class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownBgHoverButton1"
-              >
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      checked
-                      id="checkbox-item-1-1"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-1-1"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      English
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      checked
-                      id="checkbox-item-1-2"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-1-2"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      繁體中文
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-1-3"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-1-3"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Default checkbox
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </li>
           <!-- Activity  -->
           <li>
             <!-- Activity button -->
             <button
-              id="dropdownBgHoverButton2"
-              data-dropdown-toggle="dropdownBgHover2"
+              data-drawer-target="drawer-bottom-3"
+              data-drawer-show="drawer-bottom-3"
+              data-drawer-placement="bottom"
+              aria-controls="drawer-bottom-3"
+              type="button"
               class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
               type="button"
             >
@@ -190,79 +137,16 @@
                 />
               </svg>
             </button>
-            <!-- Activity Dropdown menu -->
-            <div
-              id="dropdownBgHover2"
-              class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
-            >
-              <ul
-                class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownBgHoverButton2"
-              >
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-2-1"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-2-1"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Type 1
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      checked
-                      id="checkbox-item-2-2"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-2-2"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Type 2
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-2-3"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-2-3"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Type 3
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </li>
           <!-- Price  -->
           <li>
             <!-- Price Button -->
             <button
-              id="dropdownBgHoverButton3"
-              data-dropdown-toggle="dropdownBgHover3"
+              data-drawer-target="drawer-bottom-4"
+              data-drawer-show="drawer-bottom-4"
+              data-drawer-placement="bottom"
+              aria-controls="drawer-bottom-4"
+              type="button"
               class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
               type="button"
             >
@@ -283,172 +167,16 @@
                 />
               </svg>
             </button>
-            <!-- Price Dropdown menu -->
-            <div
-              id="dropdownBgHover3"
-              class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
-            >
-              <ul
-                class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownBgHoverButton3"
-              >
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-3-1"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-3-1"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Price 1
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      checked
-                      id="checkbox-item-3-2"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-3-2"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Price 2
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-3-3"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-3-3"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      Price 3
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <!-- 其他篩選 4  -->
-          <li>
-            <!-- 其他篩選 4 Button -->
-            <button
-              id="dropdownBgHoverButton4"
-              data-dropdown-toggle="dropdownBgHover4"
-              class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
-              type="button"
-            >
-              其他篩選 4
-              <svg
-                class="ms-3 h-2.5 w-2.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg>
-            </button>
-            <!-- 其他篩選 4 Dropdown menu -->
-            <div
-              id="dropdownBgHover4"
-              class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
-            >
-              <ul
-                class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownBgHoverButton4"
-              >
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-4-1"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-4-1"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 4-1
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      checked
-                      id="checkbox-item-4-2"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-4-2"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 4-2
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-4-3"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-4-3"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 4-3
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </li>
           <!-- 其他篩選 5  -->
           <li>
             <!-- 其他篩選 5 Button -->
             <button
-              id="dropdownBgHoverButton5"
-              data-dropdown-toggle="dropdownBgHover5"
+              data-drawer-target="drawer-bottom-5"
+              data-drawer-show="drawer-bottom-5"
+              data-drawer-placement="bottom"
+              aria-controls="drawer-bottom-5"
+              type="button"
               class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
               type="button"
             >
@@ -469,79 +197,16 @@
                 />
               </svg>
             </button>
-            <!-- 其他篩選 5 Dropdown menu -->
-            <div
-              id="dropdownBgHover5"
-              class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
-            >
-              <ul
-                class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownBgHoverButton4"
-              >
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-5-1"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-5-1"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 5-1
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      checked
-                      id="checkbox-item-5-2"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-5-2"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 5-2
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-5-3"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-5-3"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 5-3
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </li>
           <!-- 其他篩選 6  -->
           <li>
-            <!-- 其他篩選 5 Button -->
+            <!-- 其他篩選 6 Button -->
             <button
-              id="dropdownBgHoverButton6"
-              data-dropdown-toggle="dropdownBgHover6"
+              data-drawer-target="drawer-bottom-6"
+              data-drawer-show="drawer-bottom-6"
+              data-drawer-placement="bottom"
+              aria-controls="drawer-bottom-6"
+              type="button"
               class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
               type="button"
             >
@@ -562,72 +227,6 @@
                 />
               </svg>
             </button>
-            <!-- 其他篩選 6 Dropdown menu -->
-            <div
-              id="dropdownBgHover6"
-              class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
-            >
-              <ul
-                class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownBgHoverButton4"
-              >
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-6-1"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-6-1"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 6-1
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      checked
-                      id="checkbox-item-6-2"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-6-2"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 6-2
-                    </label>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    <input
-                      id="checkbox-item-6-3"
-                      type="checkbox"
-                      value=""
-                      class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
-                    />
-                    <label
-                      for="checkbox-item-6-3"
-                      class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
-                    >
-                      其他篩選 6-3
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </li>
         </ul>
       </div>
@@ -636,87 +235,88 @@
     <div id="default-styled-tab-content" class="container pb-[89px] pt-[148px]">
       <!-- tabs content TOUR  -->
       <div
-        class="hidden py-4 dark:bg-gray-800"
+        class="py-4 dark:bg-gray-800"
         id="tour"
         role="tabpanel"
         aria-labelledby="tour-tab"
       >
         <ul class="-mx-2 flex flex-wrap gap-y-4">
           <!-- 1 -->
-          <li class="w-1/2 px-2">
-            <div class="relative">
-              <!-- Swiper -->
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      class="h-[156px] w-[156px] rounded-2xl object-cover"
-                      src="../assets/img/searchresult/searchresult00.png"
-                      alt=""
-                    />
+            <li class="w-1/2 px-2">
+              <a href="tour-schedule.html">
+                <div class="relative">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          class="h-[156px] w-[156px] rounded-2xl object-cover"
+                          src="../assets/img/searchresult/searchresult00.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="h-[156px] w-[156px] rounded-2xl object-cover"
+                          src="https://fakeimg.pl/156x156/"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="h-[156px] w-[156px] rounded-2xl object-cover"
+                          src="https://fakeimg.pl/156x156/"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="h-[156px] w-[156px] rounded-2xl object-cover"
+                          src="https://fakeimg.pl/156x156/"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="h-[156px] w-[156px] rounded-2xl object-cover"
+                          src="https://fakeimg.pl/156x156/"
+                          alt=""
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          class="h-[156px] w-[156px] rounded-2xl object-cover"
+                          src="https://fakeimg.pl/156x156/"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                   </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="h-[156px] w-[156px] rounded-2xl object-cover"
-                      src="https://fakeimg.pl/156x156/"
-                      alt=""
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="h-[156px] w-[156px] rounded-2xl object-cover"
-                      src="https://fakeimg.pl/156x156/"
-                      alt=""
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="h-[156px] w-[156px] rounded-2xl object-cover"
-                      src="https://fakeimg.pl/156x156/"
-                      alt=""
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="h-[156px] w-[156px] rounded-2xl object-cover"
-                      src="https://fakeimg.pl/156x156/"
-                      alt=""
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="h-[156px] w-[156px] rounded-2xl object-cover"
-                      src="https://fakeimg.pl/156x156/"
-                      alt=""
-                    />
+                  <div href="#" class="absolute right-0 top-0 z-10 mr-3 mt-3">
+                    <i class="bx bx-heart rounded-full bg-white p-1.5 text-xl leading-none opacity-70"
+                    ></i>
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
-              </div>
-              <a href="#" class="absolute right-0 top-0 z-10 mr-3 mt-3">
-                <i
-                  class="bx bx-heart rounded-full bg-white p-1.5 text-xl leading-none opacity-70"
-                ></i>
+                <div class="mt-3 flex flex-col gap-1">
+                  <p class="text-xs font-bold leading-[18px]">
+                    The Secret Stream Trekking Experience
+                  </p>
+                  <p class="text-xs/5 font-semibold">
+                    $1,050 TWD
+                    <span class="font-normal">/ person</span>
+                  </p>
+                  <div class="flex items-center gap-1">
+                    <i class="bx bxs-star"></i>
+                    <span
+                      class="text-justify text-xs/5 font-semibold text-neutral-500"
+                    >
+                      4.9 (145)
+                    </span>
+                  </div>
+                </div>
               </a>
-            </div>
-            <div class="mt-3 flex flex-col gap-1">
-              <p class="text-xs font-bold leading-[18px]">
-                The Secret Stream Trekking Experience
-              </p>
-              <p class="text-xs/5 font-semibold">
-                $1,050 TWD
-                <span class="font-normal">/ person</span>
-              </p>
-              <div class="flex items-center gap-1">
-                <i class="bx bxs-star"></i>
-                <span
-                  class="text-justify text-xs/5 font-semibold text-neutral-500"
-                >
-                  4.9 (145)
-                </span>
-              </div>
-            </div>
-          </li>
+            </li>
           <!-- 2 -->
           <li class="w-1/2 px-2">
             <div class="relative">
@@ -1107,13 +707,12 @@
       </div>
     </div>
     <!-- footer  -->
-
     <footer
-      class="fixed bottom-0 left-0 z-20 w-full border-t border-gray-200 bg-white px-2 py-1 shadow dark:border-gray-600 dark:bg-gray-800"
+      class="fixed bottom-0 left-0 z-20 w-full border-t border-gray-200 bg-white px-2 shadow dark:border-gray-600 dark:bg-gray-800"
     >
-      <div class="container">
+      <div class="container relative py-1">
         <ul
-          class="text-xxs flex flex-wrap items-center justify-between font-medium text-neutral-300 dark:text-gray-400 sm:mt-0"
+          class="flex flex-wrap items-center justify-between text-xxs font-medium text-neutral-300 dark:text-gray-400 sm:mt-0"
         >
           <li class="text-center">
             <a href="#" class="active block p-2 text-neutral-950">
@@ -1151,7 +750,6 @@
           </li>
           <li class="text-center">
             <a href="#" class="block p-2">
-              <!-- <i class='bx bx-search-alt-2 bx-sm mb-1'></i> -->
               <img
                 class="inline-block"
                 src="../assets/svg/icon_profile.svg"
@@ -1161,8 +759,675 @@
             </a>
           </li>
         </ul>
+        <!-- swith to map mode  -->
+        <a
+          href="#"
+          class="absolute bottom-full right-0 mb-4 mr-2 rounded-xl bg-neutral-600 p-3 shadow-sm"
+        >
+          <i class="bx bx-map-alt text-2xl leading-none text-white"></i>
+        </a>
       </div>
     </footer>
+    <!-- drawer  -->
+    <div class="container">
+      <!-- drawer component 1 - filter -->
+      <div
+        id="drawer-bottom-1"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        tabindex="-1"
+        aria-labelledby="drawer-bottom-1-label"
+      >
+        <div class="flex items-center border-b border-neutral-100 px-6 py-4">
+          <button
+            type="button"
+            data-drawer-hide="drawer-bottom-2"
+            aria-controls="drawer-bottom-2"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="h-3 w-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close menu</span>
+          </button>
+          <h5
+            id="drawer-bottom-2-label"
+            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+          >
+            Filter
+          </h5>
+          <button class="ml-auto text-sm underline" type="button">Clear</button>
+        </div>
+        <div class="flex flex-col gap-6 px-6 py-4">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
+          <button
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            type="button">
+            Show 300+ results
+          </button>
+        </div>
+      
+      </div>
+      <!-- drawer component 2 - language -->
+      <div
+        id="drawer-bottom-2"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        tabindex="-1"
+        aria-labelledby="drawer-bottom-2-label"
+      >
+        <div class="flex items-center border-b border-neutral-100 px-6 py-4">
+          <button
+            type="button"
+            data-drawer-hide="drawer-bottom-2"
+            aria-controls="drawer-bottom-2"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="h-3 w-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close menu</span>
+          </button>
+          <h5
+            id="drawer-bottom-2-label"
+            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+          >
+            Guide Languages
+          </h5>
+          <button class="ml-auto text-sm underline" type="button">Clear</button>
+        </div>
+        <div class="flex flex-col gap-6 px-6 py-4">
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-semibold">Local languages</p>
+            <ul class="flex flex-wrap items-center gap-2">
+              <li>
+                <input
+                  id="language-checkbox-1"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-1"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  中文
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-2"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                  checked
+                />
+                <label
+                  for="language-checkbox-2"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  閩南語
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-3"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-3"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  Hakka(客家)
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-semibold">Other languages</p>
+            <ul class="flex flex-wrap items-center gap-2">
+              <li>
+                <input
+                  id="language-checkbox-4"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-4"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  English
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-5"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                  checked
+                />
+                <label
+                  for="language-checkbox-5"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  Deutsch
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-6"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-6"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  Français
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-7"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-7"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  Español
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-8"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-8"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  Português
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-9"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-9"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  日本語
+                </label>
+              </li>
+              <li>
+                <input
+                  id="language-checkbox-10"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="language-checkbox-10"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                  한국어
+                </label>
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="mt-3 flex w-full items-center gap-2.5 text-sm font-bold dark:text-gray-400 rtl:text-right"
+              data-accordion-target="#accordion-flush-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-2"
+            >
+              <span class="underline">Show more</span>
+              <i class="bx bx-chevron-down text-2xl leading-none"></i>
+            </button>
+          </div>
+          <button
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            type="button"
+          >
+            Show 300+ results
+          </button>
+        </div>
+      </div>
+      <!-- drawer component 3 - Activity types -->
+      <div
+        id="drawer-bottom-3"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        tabindex="-1"
+        aria-labelledby="drawer-bottom-3-label"
+      >
+        <div class="flex items-center border-b border-neutral-100 px-6 py-4">
+          <button
+            type="button"
+            data-drawer-hide="drawer-bottom-3"
+            aria-controls="drawer-bottom-3"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="h-3 w-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close menu</span>
+          </button>
+          <h5
+            id="drawer-bottom-3-label"
+            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+          >
+            Activity Types
+          </h5>
+          <button class="ml-auto text-sm underline" type="button">Clear</button>
+        </div>
+        <div class="flex flex-col gap-6 px-6 py-4">
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-semibold">Cultural Experience</p>
+            <ul class="flex flex-wrap items-center gap-2">
+              <li>
+                <input
+                  id="activity-checkbox-1"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-1"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Volunteer service
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-2"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                  checked
+                />
+                <label
+                  for="activity-checkbox-2"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Nature tour
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-3"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-3"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                History and culture
+                </label>
+              </li>
+              <li></li>
+                <input
+                  id="activity-checkbox-4"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-4"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Traditional dress
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-semibold">Outdoor Activities</p>
+            <ul class="flex flex-wrap items-center gap-2">
+              <li>
+                <input
+                  id="activity-checkbox-5"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                  checked
+                />
+                <label
+                  for="activity-checkbox-5"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Hiking
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-6"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-6"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Diving
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-7"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-7"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Skiing
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-8"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-8"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Camping
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-9"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-9"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Wildlife Tour
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-semibold">Local Life</p>
+            <ul class="flex flex-wrap items-center gap-2">
+              <li>
+                <input
+                  id="activity-checkbox-10"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-10"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                City walk
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-11"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                  checked
+                />
+                <label
+                  for="activity-checkbox-11"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Community activity
+                </label>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-semibold">Uncharted</p>
+            <ul class="flex flex-wrap items-center gap-2">
+              <li>
+                <input
+                  id="activity-checkbox-12"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-12"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Cave snorkeling
+                </label>
+              </li>
+              <li>
+                <input
+                  id="activity-checkbox-13"
+                  type="checkbox"
+                  value=""
+                  class="btn-check"
+                />
+                <label
+                  for="activity-checkbox-13"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                >
+                Forest bath
+                </label>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            type="button"
+          >
+            Show 300+ results
+          </button>
+        </div>
+      </div>
+      <!-- drawer component 4 - Price -->
+      <div
+        id="drawer-bottom-4"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        tabindex="-1"
+        aria-labelledby="drawer-bottom-4-label"
+      >
+        <div class="flex items-center border-b border-neutral-100 px-6 py-4">
+          <button
+            type="button"
+            data-drawer-hide="drawer-bottom-2"
+            aria-controls="drawer-bottom-2"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              class="h-3 w-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close menu</span>
+          </button>
+          <h5
+            id="drawer-bottom-2-label"
+            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+          >
+          Price
+          </h5>
+          <button class="ml-auto text-sm underline" type="button">Clear</button>
+        </div>
+        <div class="flex flex-col gap-6 px-6 py-4">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
+          <button
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            type="button">
+            Show 300+ results
+          </button>
+        </div>
+      </div>
+      <!-- drawer component 5 -->
+      <div
+        id="drawer-bottom-5"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        tabindex="-1"
+        aria-labelledby="drawer-bottom-5-label"
+      >
+        <div class="flex items-center border-b border-neutral-100 px-6 py-4">
+          <button
+            type="button"
+            data-drawer-hide="drawer-bottom-2"
+            aria-controls="drawer-bottom-2"
+            class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+          >
+            <svg
+              class="h-3 w-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close menu</span>
+          </button>
+          <h5
+            id="drawer-bottom-2-label"
+            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+          >
+          其他篩選 5
+          </h5>
+          <button class="ml-auto text-sm underline" type="button">Clear</button>
+        </div>
+        <div class="flex flex-col gap-6 px-6 py-4">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
+          <button
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            type="button">
+            Show 300+ results
+          </button>
+        </div>
+      </div>
+      <!-- drawer component 6 -->
+      <div
+        id="drawer-bottom-6"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        tabindex="-1"
+        aria-labelledby="drawer-bottom-6-label"
+      >
+      <div class="flex items-center border-b border-neutral-100 px-6 py-4">
+        <button
+          type="button"
+          data-drawer-hide="drawer-bottom-2"
+          aria-controls="drawer-bottom-2"
+          class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        >
+          <svg
+            class="h-3 w-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            />
+          </svg>
+          <span class="sr-only">Close menu</span>
+        </button>
+        <h5
+          id="drawer-bottom-2-label"
+          class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+        >
+        其他篩選 6
+        </h5>
+        <button class="ml-auto text-sm underline" type="button">Clear</button>
+      </div>
+      <div class="flex flex-col gap-6 px-6 py-4">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
+        <button
+          class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+          type="button">
+          Show 300+ results
+        </button>
+      </div>
+      </div>
+    </div>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
