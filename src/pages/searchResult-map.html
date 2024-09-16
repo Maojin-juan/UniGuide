@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搜尋結果 - 地圖模式</title>
+  </head>
+  <body class="pb-[94px] pt-[164px]">
+    <div class="fixed left-0 top-0 z-50 w-full bg-white">
+      <%- include('./src/layout/navbar.ejs'); -%> <%-
+      include('./src/layout/filter.ejs'); -%>
+    </div>
+
+    <section>
+      <img src="../assets/img/map01.jpg" alt="map" />
+    </section>
+
+    <div
+      class="fixed bottom-0 left-0 w-full space-y-4 rounded-t-2xl bg-white py-4 pb-[38px]"
+    >
+      <span class="mx-auto block h-1 w-8 rounded-full bg-neutral-200"></span>
+      <div class="flex items-center justify-center gap-x-2">
+        <a href="#" class="text-brand-30 rounded-lg bg-brand-200 px-2 text-xs">
+          300
+        </a>
+        <p class="text-sm">Experiences</p>
+      </div>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
