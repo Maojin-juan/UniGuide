@@ -3,49 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>首頁</title>
   </head>
   <body class="pb-[73px] pt-28">
-    <nav class="fixed left-0 top-0 z-50 w-full bg-white">
-      <!-- SearchInput -->
-      <div class="container">
-        <button
-          type="button"
-          class="flex w-full items-center gap-x-2 rounded-full px-5 py-4 font-semibold text-[#141515] shadow-[0px_6px_12px_-4px_#0000001A]"
-          data-drawer-target="drawer-left-example"
-          data-drawer-show="drawer-left-example"
-          data-drawer-placement="left"
-          aria-controls="drawer-left-example"
-        >
-          <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
-          Where to?
-        </button>
-
-        <%- include('./src/components/modal.ejs'); -%>
-      </div>
-
-      <!-- Tabs -->
-      <div class="mt-2 border-b border-neutral-100 text-center font-semibold">
-        <ul class="container -mb-px flex px-0">
-          <li class="relative w-full">
-            <a
-              href="#"
-              class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
-            >
-              Tour
-            </a>
-          </li>
-          <li class="relative w-full">
-            <a
-              href="#"
-              class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
-              aria-current="page"
-            >
-              Meet-up
-            </a>
-          </li>
-        </ul>
-      </div>
+    <nav class="fixed left-0 top-0 z-50 w-full">
+      <%- include('./src/layout/navbar.ejs'); -%>
     </nav>
 
     <section>
@@ -106,53 +68,8 @@
       </ul>
     </section>
 
-    <%- include('./src/components/cardSwiper.ejs'); -%>
-
-    <footer
-      class="fixed bottom-0 left-0 z-40 w-full border-t border-neutral-100"
-    >
-      <ul
-        class="flex justify-center bg-white px-2 py-1 text-[10px] font-semibold text-neutral-300"
-      >
-        <li>
-          <a
-            href="#"
-            class="flex flex-col items-center gap-y-1 py-2 text-black"
-          >
-            <i class="bx bx-search-alt-2 mx-6 text-2xl leading-6"></i>
-            Explore
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
-            <i class="bx bx-heart mx-6 text-2xl leading-6"></i>
-            Wishlists
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
-            <img src="../assets/svg/Order.svg" alt="Order" class="mx-6" />
-            Orders
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
-            <img
-              src="../assets/svg/LogoNoFeet.svg"
-              alt="LogoNoFeet"
-              class="mx-6"
-            />
-            Messages
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex flex-col items-center gap-y-1 py-2">
-            <i class="bx bx-user mx-6 text-2xl leading-6"></i>
-            Profile
-          </a>
-        </li>
-      </ul>
-    </footer>
+    <%- include('./src/components/cardSwiper.ejs'); -%> <%-
+    include('./src/layout/footer.ejs'); -%>
 
     <script type="module" src="../main.js"></script>
   </body>

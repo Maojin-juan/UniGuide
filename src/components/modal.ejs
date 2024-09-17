@@ -1,10 +1,10 @@
 <div
   id="drawer-left-example"
-  class="fixed left-0 top-0 z-10 h-screen w-full -translate-x-full overflow-y-auto bg-[#F5F6F6] px-6 text-[#141515] transition-transform"
+  class="fixed left-0 top-0 z-10 h-screen w-full -translate-x-full overflow-y-auto bg-[#F5F6F6] pb-20 transition-transform"
   tabindex="-1"
   aria-labelledby="drawer-left-label"
 >
-  <div class="space-y-4">
+  <div class="container relative space-y-4">
     <button
       type="button"
       data-drawer-hide="drawer-left-example"
@@ -32,7 +32,7 @@
       <!-- Dropdown menu -->
       <div
         id="dropdown-where"
-        class="z-10 hidden w-full !-translate-y-0 space-y-3 divide-gray-100 rounded-[20px] bg-white shadow-[0px_12px_16px_-4px_#00000014]"
+        class="z-20 hidden w-full !-translate-y-0 space-y-3 divide-gray-100 rounded-[20px] bg-white shadow-[0px_12px_16px_-4px_#00000014]"
       >
         <div class="mx-2 mt-2 rounded-2xl border border-neutral-100">
           <label
@@ -52,7 +52,7 @@
             />
             <button class="close-dropdown h-[22px] w-5">
               <i
-                class="bx bxs-x-circle text-xl leading-[22px] text-[#3C3C4399] opacity-60"
+                class="bx bxs-x-circle text-xl leading-[22px] text-[#3C3C4399]"
               ></i>
             </button>
           </div>
@@ -130,9 +130,10 @@
       </div>
     </div>
 
-    <!-- Date Picker -->
+    <!-- Datepicker -->
     <div>
       <button
+        type="button"
         id="dropdown-when"
         class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
       >
@@ -142,36 +143,97 @@
         </div>
         <p class="datepicker-selected text-sm font-semibold">From tomorrow</p>
       </button>
-      <div
-        id="datepicker"
-        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
-      >
-        test
-      </div>
+      <%- include('./src/components/datepicker.ejs'); -%>
     </div>
 
     <!-- Members Selector -->
-    <div id="accrodin-who" data-accordion="collapse">
-      <h2 id="accordion-who-heading-2">
-        <button
-          type="button"
-          data-accordion-target="#accordion-collapse-body-2"
-          aria-expanded="false"
-          aria-controls="accordion-collapse-body-2"
-          class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
-        >
-          <div class="flex gap-x-2">
-            <i class="bx bx-user-pin text-2xl leading-6"></i>
-            <p>Who</p>
-          </div>
-          <p class="text-sm font-semibold">Only me</p>
-        </button>
-      </h2>
+    <div>
+      <button
+        type="button"
+        id="accordion-who"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-user-pin text-2xl leading-6"></i>
+          <p class="member-title">Who</p>
+        </div>
+        <p class="member-selected text-sm font-semibold">Only me</p>
+      </button>
       <div
-        id="accordion-collapse-body-2"
-        class="hidden"
-        aria-labelledby="accordion-collapse-heading-2"
-      ></div>
+        id="member"
+        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
+      >
+        <div class="py-4">
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Adult</p>
+              <p class="text-xs text-[#6A706F]">Age 13 or above</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">1</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Child</p>
+              <p class="text-xs text-[#6A706F]">2-12 years old</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Toddler</p>
+              <p class="text-xs text-[#6A706F]">Under 2 years old</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Pet</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Search Button -->
+    <a
+      href="../pages/searchResult-map.html"
+      class="fixed bottom-4 left-1/2 flex w-[327px] -translate-x-1/2 items-center justify-center rounded-lg bg-brand-300 py-3 font-semibold"
+    >
+      <i class="bx bx-search-alt-2 me-2 text-2xl leading-6"></i>
+      Search
+    </a>
   </div>
 </div>

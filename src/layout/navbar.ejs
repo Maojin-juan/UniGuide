@@ -1,0 +1,41 @@
+<div class="bg-white">
+  <!-- SearchInput -->
+  <div class="container">
+    <button
+      type="button"
+      class="flex w-full items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
+      data-drawer-target="drawer-left-example"
+      data-drawer-show="drawer-left-example"
+      data-drawer-placement="left"
+      aria-controls="drawer-left-example"
+    >
+      <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+      Where to?
+    </button>
+
+    <%- include('./src/components/modal.ejs'); -%>
+  </div>
+
+  <!-- Tabs -->
+  <div class="my-2 border-b border-neutral-100 text-center font-semibold">
+    <ul class="container -mb-px flex px-0">
+      <li class="relative w-full">
+        <a
+          href="#"
+          class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
+        >
+          Tour
+        </a>
+      </li>
+      <li class="relative w-full">
+        <a
+          href="#"
+          class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
+          aria-current="page"
+        >
+          Meet-up
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
