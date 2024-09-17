@@ -4,7 +4,6 @@ import "boxicons/css/boxicons.min.css";
 import "./assets/style/tailwind.css";
 
 import "./js/carousel";
-import "./js/dropdown";
 import "./js/showMoreLessButton";
 import "./js/collapse";
 import "./js/datepicker";
