@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkout</title>
+  </head>
+  <body>
+    <div class="bg-neutral-50">
+      <nav class="container">
+        <a href="tour-schedule.html">
+          <i class="bx bx-left-arrow-alt py-3 text-2xl leading-none"></i>
+        </a>
+        <h1>Confirm payment</h1>
+        <a href="tour.html" class="underline">Cancel</a>
+      </nav>
+      <section class="container">
+        <div
+          class="relative flex items-start rounded-lg border border-neutral-200 bg-white font-bold shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        >
+          <div class="shrink-0">
+            <img
+              class="h-[123px] w-[137px] rounded-l-lg object-cover"
+              src="../assets/img/searchresult/searchresult00.png"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h2 class="text-base tracking-tight dark:text-white">
+              The Secret Stream Trekking Experience
+            </h2>
+            <a
+              href="#"
+              class="flex items-center text-xs/[18px] text-neutral-400"
+            >
+              <span class="underline">Show more</span>
+              <i class="bx bx-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- your booking  -->
+      <section class="container border-b border-neutral-100 pb-4">
+        <h2 class="text-xl font-bold">Your booking</h2>
+        <ul class="flex flex-col gap-2">
+          <li>
+            <h3 class="mb-1 text-base font-semibold">Date :</h3>
+            <div class="flex flex-col text-sm text-neutral-500">
+              <time>Fri, Aug 2, 2024</time>
+              <time>07:00 AM - 11:00 AM GMT+8:00</time>
+            </div>
+          </li>
+          <li>
+            <h3 class="mb-1 text-base font-semibold">Guest :</h3>
+            <p class="text-sm text-neutral-500">1 Adult</p>
+          </li>
+          <li>
+            <h3 class="mb-1 text-base font-semibold">Journey :</h3>
+            <p class="readText truncate-multi-line text-sm text-neutral-500">
+              Discover the thrill of stream trekking as you navigate through
+              crystal-clear waters and lush forest trails.
+              <br />
+              This adventure combines hiking and wading through streams,
+              offering a unique way to explore nature's hidden gems. Perfect for
+              nature enthusiasts and adventure seekers, stream trekking provides
+              a refreshing escape from the hustle and bustle of everyday life.
+            </p>
+            <button
+              type="button"
+              class="readButton flex w-full items-center justify-between gap-3 text-sm font-bold underline dark:text-gray-400 rtl:text-right"
+              data-accordion-target="#accordion-flush-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-2"
+            >
+              Read more
+            </button>
+          </li>
+        </ul>
+      </section>
+      <!-- Promo code  -->
+      <section class="container border-b border-neutral-100 pb-4">
+        <h2 class="text-xl font-bold">Promo code</h2>
+        <form>
+          <label
+            for="search"
+            class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Promo code
+          </label>
+          <div class="relative">
+            <input
+              type="text"
+              id="promoCode"
+              class="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-4 text-sm text-gray-900 focus:border-neutral-300 focus:ring-neutral-300 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white dark:placeholder-neutral-300 dark:focus:border-neutral-500 dark:focus:ring-neutral-500"
+              placeholder=""
+              required
+            />
+            <button
+              type="submit"
+              class="absolute bottom-0 end-0 top-0 rounded-lg bg-neutral-100 px-4 py-2 text-base font-medium text-neutral-950 hover:bg-neutral-200 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-neutral-50 dark:hover:bg-neutral-100 dark:focus:ring-neutral-200"
+            >
+              Apply
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- price details  -->
+      <section class="container border-b border-neutral-100 pb-4">
+        <h2 class="text-xl font-bold">Price details</h2>
+        <div class="flex justify-between">
+          <p>Original price</p>
+          <span>$1,200 TWD</span>
+        </div>
+        <div class="flex justify-between">
+          <p>Original price</p>
+          <span>$1,200 TWD</span>
+        </div>
+        <div
+          class="flex justify-between border-t border-neutral-950 text-lg font-semibold"
+        >
+          <p>Total</p>
+          <span>$1,250 TWD</span>
+        </div>
+      </section>
+      <!-- payment  -->
+      <section class="container border-b border-neutral-100 pb-4">
+        <h2 class="text-xl font-bold">Payment method</h2>
+        <ul>
+          <li>
+            <a href="#" class="flex">
+              <i class="bx bx-credit-card"></i>
+              <p class="text-neutral-500">Credit or charge card</p>
+              <i class="bx bx-plus"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

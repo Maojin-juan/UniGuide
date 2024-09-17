@@ -9,9 +9,9 @@ const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 24,
   loop: true,
-  autoplay: {
-    delay: 1000,
-  },
+  // autoplay: {
+  //   delay: 1000,
+  // },
   pagination: {
     el: ".swiper-pagination",
   },
