@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>page 4</title>
-    <!-- tailwind： 沒先載入的話，drawer 在頁面載入時，會閃爍一下 -->
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div class="fixed start-0 top-0 z-20 w-full bg-white">
@@ -14,7 +12,7 @@
         <form class="mx-auto mb-2 max-w-md">
           <label
             for="default-search"
-            class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            class="sr-only mb-2 text-sm font-medium text-gray-900"
           >
             Search
           </label>
@@ -27,7 +25,7 @@
             <input
               type="search"
               id="default-search"
-              class="block w-full rounded-full border border-0 p-3.5 ps-14 text-sm font-semibold text-gray-900 shadow-xs focus:border-neutral-950 focus:ring-neutral-950 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              class="block w-full rounded-full border border-0 p-3.5 ps-14 text-sm font-semibold text-gray-900 shadow-xs focus:border-neutral-950 focus:ring-neutral-950"
               value="Taiwan"
               placeholder=""
               required
@@ -36,14 +34,14 @@
         </form>
       </nav>
       <!-- tabs  -->
-      <div class="mb-2 border-b border-gray-200 dark:border-gray-700">
+      <div class="mb-2 border-b border-gray-200">
         <div class="container">
           <ul
             class="-mb-px flex flex-wrap text-center text-base font-semibold"
             id="default-styled-tab"
             data-tabs-toggle="#default-styled-tab-content"
-            data-tabs-active-classes="text-neutral-950 hover:text-neutral-950 dark:text-purple-500 dark:hover:text-purple-500 border-neutral-950 dark:border-purple-500"
-            data-tabs-inactive-classes="border-transparent text-neutral-950 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+            data-tabs-active-classes="text-neutral-950 hover:text-neutral-950  border-neutral-950"
+            data-tabs-inactive-classes="border-transparent text-neutral-950 hover:text-gray-600 border-gray-100 hover:border-gray-300"
             role="tablist"
           >
             <li class="w-1/2" role="presentation">
@@ -88,7 +86,7 @@
               type="button"
             >
               <i
-                class="bx bx-slider-alt bx-xs bx-border-circle dark:focus:ring-brand-60 border-neutral-300 p-2 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+                class="bx bx-slider-alt bx-xs bx-border-circle border-neutral-300 p-2 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600"
               ></i>
             </button>
           </li>
@@ -101,7 +99,7 @@
               data-drawer-placement="bottom"
               aria-controls="drawer-bottom-2"
               type="button"
-              class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-brand-600 bg-brand-50 px-4 py-1.5 text-center text-sm font-medium text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+              class="inline-flex items-baseline rounded-full border border-brand-600 bg-brand-50 px-4 py-1.5 text-center text-sm font-medium text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600"
               type="button"
             >
               Language
@@ -117,7 +115,7 @@
               data-drawer-placement="bottom"
               aria-controls="drawer-bottom-3"
               type="button"
-              class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+              class="inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600"
               type="button"
             >
               Activity Types
@@ -147,7 +145,7 @@
               data-drawer-placement="bottom"
               aria-controls="drawer-bottom-4"
               type="button"
-              class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+              class="inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600"
               type="button"
             >
               Price
@@ -177,7 +175,7 @@
               data-drawer-placement="bottom"
               aria-controls="drawer-bottom-5"
               type="button"
-              class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+              class="inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600"
               type="button"
             >
               其他篩選 5
@@ -207,7 +205,7 @@
               data-drawer-placement="bottom"
               aria-controls="drawer-bottom-6"
               type="button"
-              class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+              class="inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600"
               type="button"
             >
               其他篩選 6
@@ -235,7 +233,7 @@
     <div id="default-styled-tab-content" class="container pb-[89px] pt-[148px]">
       <!-- tabs content TOUR  -->
       <div
-        class="py-4 dark:bg-gray-800"
+        class="py-4"
         id="tour"
         role="tabpanel"
         aria-labelledby="tour-tab"
@@ -690,14 +688,14 @@
       </div>
       <!-- tabs content Meet Up  -->
       <div
-        class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
+        class="hidden rounded-lg bg-gray-50 p-4"
         id="styled-dashboard"
         role="tabpanel"
         aria-labelledby="dashboard-tab"
       >
-        <p class="text-sm text-gray-500 dark:text-gray-400">
+        <p class="text-sm text-gray-500">
           This is some placeholder content the
-          <strong class="font-medium text-gray-800 dark:text-white">
+          <strong class="font-medium text-gray-800">
             MEET-UP
           </strong>
           . Clicking another tab will toggle the visibility of this one for the
@@ -708,11 +706,11 @@
     </div>
     <!-- footer  -->
     <footer
-      class="fixed bottom-0 left-0 z-20 w-full border-t border-gray-200 bg-white px-2 shadow dark:border-gray-600 dark:bg-gray-800"
+      class="fixed bottom-0 left-0 z-20 w-full border-t border-gray-200 bg-white px-2 shadow"
     >
       <div class="container relative py-1">
         <ul
-          class="flex flex-wrap items-center justify-between text-xxs font-medium text-neutral-300 dark:text-gray-400 sm:mt-0"
+          class="flex flex-wrap items-center justify-between text-xxs font-medium text-neutral-300 sm:mt-0"
         >
           <li class="text-center">
             <a href="#" class="active block p-2 text-neutral-950">
@@ -773,7 +771,7 @@
       <!-- drawer component 1 - filter -->
       <div
         id="drawer-bottom-1"
-        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
         tabindex="-1"
         aria-labelledby="drawer-bottom-1-label"
       >
@@ -782,7 +780,7 @@
             type="button"
             data-drawer-hide="drawer-bottom-2"
             aria-controls="drawer-bottom-2"
-            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900"
           >
             <svg
               class="h-3 w-3"
@@ -803,7 +801,7 @@
           </button>
           <h5
             id="drawer-bottom-2-label"
-            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+            class="inline-flex items-center text-2xl font-bold"
           >
             Filter
           </h5>
@@ -812,7 +810,7 @@
         <div class="flex flex-col gap-6 px-6 py-4">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
           <button
-            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200"
             type="button">
             Show 300+ results
           </button>
@@ -822,7 +820,7 @@
       <!-- drawer component 2 - language -->
       <div
         id="drawer-bottom-2"
-        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
         tabindex="-1"
         aria-labelledby="drawer-bottom-2-label"
       >
@@ -831,7 +829,7 @@
             type="button"
             data-drawer-hide="drawer-bottom-2"
             aria-controls="drawer-bottom-2"
-            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900"
           >
             <svg
               class="h-3 w-3"
@@ -852,7 +850,7 @@
           </button>
           <h5
             id="drawer-bottom-2-label"
-            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+            class="inline-flex items-center text-2xl font-bold"
           >
             Guide Languages
           </h5>
@@ -871,7 +869,7 @@
                 />
                 <label
                   for="language-checkbox-1"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50"
                 >
                   中文
                 </label>
@@ -886,7 +884,7 @@
                 />
                 <label
                   for="language-checkbox-2"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50"
                 >
                   閩南語
                 </label>
@@ -900,7 +898,7 @@
                 />
                 <label
                   for="language-checkbox-3"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50"
                 >
                   Hakka(客家)
                 </label>
@@ -919,7 +917,7 @@
                 />
                 <label
                   for="language-checkbox-4"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                   English
                 </label>
@@ -934,7 +932,7 @@
                 />
                 <label
                   for="language-checkbox-5"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                   Deutsch
                 </label>
@@ -948,7 +946,7 @@
                 />
                 <label
                   for="language-checkbox-6"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                   Français
                 </label>
@@ -962,7 +960,7 @@
                 />
                 <label
                   for="language-checkbox-7"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                   Español
                 </label>
@@ -976,7 +974,7 @@
                 />
                 <label
                   for="language-checkbox-8"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                   Português
                 </label>
@@ -990,7 +988,7 @@
                 />
                 <label
                   for="language-checkbox-9"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                   日本語
                 </label>
@@ -1004,7 +1002,7 @@
                 />
                 <label
                   for="language-checkbox-10"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                   한국어
                 </label>
@@ -1012,7 +1010,7 @@
             </ul>
             <button
               type="button"
-              class="mt-3 flex w-full items-center gap-2.5 text-sm font-bold dark:text-gray-400 rtl:text-right"
+              class="mt-3 flex w-full items-center gap-2.5 text-sm font-bold rtl:text-right"
               data-accordion-target="#accordion-flush-body-2"
               aria-expanded="false"
               aria-controls="accordion-flush-body-2"
@@ -1022,7 +1020,7 @@
             </button>
           </div>
           <button
-            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200"
             type="button"
           >
             Show 300+ results
@@ -1032,7 +1030,7 @@
       <!-- drawer component 3 - Activity types -->
       <div
         id="drawer-bottom-3"
-        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
         tabindex="-1"
         aria-labelledby="drawer-bottom-3-label"
       >
@@ -1041,7 +1039,7 @@
             type="button"
             data-drawer-hide="drawer-bottom-3"
             aria-controls="drawer-bottom-3"
-            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900"
           >
             <svg
               class="h-3 w-3"
@@ -1062,7 +1060,7 @@
           </button>
           <h5
             id="drawer-bottom-3-label"
-            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+            class="inline-flex items-center text-2xl font-bold"
           >
             Activity Types
           </h5>
@@ -1081,7 +1079,7 @@
                 />
                 <label
                   for="activity-checkbox-1"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Volunteer service
                 </label>
@@ -1096,7 +1094,7 @@
                 />
                 <label
                   for="activity-checkbox-2"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Nature tour
                 </label>
@@ -1110,7 +1108,7 @@
                 />
                 <label
                   for="activity-checkbox-3"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 History and culture
                 </label>
@@ -1124,7 +1122,7 @@
                 />
                 <label
                   for="activity-checkbox-4"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Traditional dress
                 </label>
@@ -1144,7 +1142,7 @@
                 />
                 <label
                   for="activity-checkbox-5"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Hiking
                 </label>
@@ -1158,7 +1156,7 @@
                 />
                 <label
                   for="activity-checkbox-6"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Diving
                 </label>
@@ -1172,7 +1170,7 @@
                 />
                 <label
                   for="activity-checkbox-7"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Skiing
                 </label>
@@ -1186,7 +1184,7 @@
                 />
                 <label
                   for="activity-checkbox-8"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Camping
                 </label>
@@ -1200,7 +1198,7 @@
                 />
                 <label
                   for="activity-checkbox-9"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Wildlife Tour
                 </label>
@@ -1219,7 +1217,7 @@
                 />
                 <label
                   for="activity-checkbox-10"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 City walk
                 </label>
@@ -1234,7 +1232,7 @@
                 />
                 <label
                   for="activity-checkbox-11"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Community activity
                 </label>
@@ -1254,7 +1252,7 @@
                 />
                 <label
                   for="activity-checkbox-12"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Cave snorkeling
                 </label>
@@ -1268,7 +1266,7 @@
                 />
                 <label
                   for="activity-checkbox-13"
-                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 hover:bg-brand-200 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+                  class="rounded-full bg-neutral-50 px-3 py-1.5 text-xs leading-[18px] text-black/50 focus:outline-none focus:ring-4 focus:ring-brand-200"
                 >
                 Forest bath
                 </label>
@@ -1276,7 +1274,7 @@
             </ul>
           </div>
           <button
-            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200"
             type="button"
           >
             Show 300+ results
@@ -1286,7 +1284,7 @@
       <!-- drawer component 4 - Price -->
       <div
         id="drawer-bottom-4"
-        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
         tabindex="-1"
         aria-labelledby="drawer-bottom-4-label"
       >
@@ -1295,7 +1293,7 @@
             type="button"
             data-drawer-hide="drawer-bottom-2"
             aria-controls="drawer-bottom-2"
-            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+            class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-base hover:bg-gray-200 hover:text-gray-900"
           >
             <svg
               class="h-3 w-3"
@@ -1316,7 +1314,7 @@
           </button>
           <h5
             id="drawer-bottom-2-label"
-            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+            class="inline-flex items-center text-2xl font-bold"
           >
           Price
           </h5>
@@ -1325,7 +1323,7 @@
         <div class="flex flex-col gap-6 px-6 py-4">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
           <button
-            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200"
             type="button">
             Show 300+ results
           </button>
@@ -1334,7 +1332,7 @@
       <!-- drawer component 5 -->
       <div
         id="drawer-bottom-5"
-        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
         tabindex="-1"
         aria-labelledby="drawer-bottom-5-label"
       >
@@ -1343,7 +1341,7 @@
             type="button"
             data-drawer-hide="drawer-bottom-2"
             aria-controls="drawer-bottom-2"
-            class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+            class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-2xl bg-white shadow-sm transition-transform"
           >
             <svg
               class="h-3 w-3"
@@ -1364,7 +1362,7 @@
           </button>
           <h5
             id="drawer-bottom-2-label"
-            class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+            class="inline-flex items-center text-2xl font-bold"
           >
           其他篩選 5
           </h5>
@@ -1373,7 +1371,7 @@
         <div class="flex flex-col gap-6 px-6 py-4">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
           <button
-            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+            class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200"
             type="button">
             Show 300+ results
           </button>
@@ -1382,7 +1380,7 @@
       <!-- drawer component 6 -->
       <div
         id="drawer-bottom-6"
-        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
         tabindex="-1"
         aria-labelledby="drawer-bottom-6-label"
       >
@@ -1391,7 +1389,7 @@
           type="button"
           data-drawer-hide="drawer-bottom-2"
           aria-controls="drawer-bottom-2"
-          class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-2xl bg-white shadow-sm transition-transform dark:bg-gray-800"
+          class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-2xl bg-white shadow-sm transition-transform"
         >
           <svg
             class="h-3 w-3"
@@ -1412,7 +1410,7 @@
         </button>
         <h5
           id="drawer-bottom-2-label"
-          class="inline-flex items-center text-2xl font-bold dark:text-gray-400"
+          class="inline-flex items-center text-2xl font-bold"
         >
         其他篩選 6
         </h5>
@@ -1421,7 +1419,7 @@
       <div class="flex flex-col gap-6 px-6 py-4">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, ipsa.</p>
         <button
-          class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200 dark:bg-brand-300 dark:hover:bg-brand-400"
+          class="w-full rounded-lg bg-brand-300 px-5 py-3 text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200"
           type="button">
           Show 300+ results
         </button>
