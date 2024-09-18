@@ -1,177 +1,48 @@
 <div
   id="drawer-left-example"
-  class="fixed left-0 top-0 z-10 h-screen w-full -translate-x-full overflow-y-auto bg-[#F5F6F6] pb-20 transition-transform"
+  class="fixed left-0 top-0 z-10 h-screen w-full -translate-x-full overflow-y-auto bg-[#F5F6F6] pb-36 transition-transform"
   tabindex="-1"
   aria-labelledby="drawer-left-label"
 >
   <div class="container relative space-y-4">
-    <div class="flex items-center">
-      <button
-        type="button"
-        data-drawer-hide="drawer-left-example"
-        aria-controls="drawer-left-example"
-        class="flex items-center justify-center py-3"
-      >
-        <i class="bx bx-left-arrow-alt text-2xl leading-6"></i>
-        <span class="sr-only">Close menu</span>
-      </button>
-      <p class="text-2xl font-bold">Plan selection</p>
-      <button
-        type="button"
-        data-drawer-hide="drawer-left-example"
-        aria-controls="drawer-left-example"
-        class="flex items-center justify-center py-3"
-      >
-        <i class="bx bx-left-arrow-alt text-2xl leading-6"></i>
-        <span class="sr-only">Close menu</span>
-      </button>
-    </div>
-
-    <!-- Location Search -->
-    <div class="relative">
-      <button
-        type="button"
-        id="dropdownWhereButton"
-        data-dropdown-toggle="dropdown-where"
-        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 shadow-[0px_6px_12px_-4px_#0000001A]"
-      >
-        <div class="flex gap-x-2">
-          <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
-          <p>Where</p>
-        </div>
-        <p class="text-sm font-semibold">Current location</p>
-      </button>
-      <!-- Dropdown menu -->
-      <div
-        id="dropdown-where"
-        class="z-20 hidden w-full !-translate-y-0 space-y-3 divide-gray-100 rounded-[20px] bg-white shadow-[0px_12px_16px_-4px_#00000014]"
-      >
-        <div class="mx-2 mt-2 rounded-2xl border border-neutral-100">
-          <label
-            for="location-search"
-            class="sr-only text-sm font-medium text-gray-900"
-          >
-            location-search
-          </label>
-          <div class="flex items-center gap-x-2 rounded-xl px-4">
-            <i class="bx bx-search text-2xl leading-6"></i>
-            <input
-              type="search"
-              id="location-search"
-              class="w-full border-none bg-white px-0 py-2 placeholder:font-semibold placeholder:text-black focus:border-transparent focus:ring-transparent"
-              placeholder="Where to?"
-              required
-            />
-            <button class="close-dropdown h-[22px] w-5">
-              <i
-                class="bx bxs-x-circle text-xl leading-[22px] text-[#3C3C4399]"
-              ></i>
-            </button>
-          </div>
-        </div>
-        <div class="space-y-3 px-5 pb-4">
-          <div>
-            <p class="text-xs leading-5 text-neutral-400">Recent</p>
-            <ul class="space-y-1 text-sm" aria-labelledby="dropdownWhereButton">
-              <li>
-                <a
-                  href="#"
-                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
-                >
-                  <i
-                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
-                  ></i>
-                  Taiwan
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
-                >
-                  <i
-                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
-                  ></i>
-                  Tokyo
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p class="text-xs leading-5 text-neutral-400">Popular</p>
-            <ul
-              class="space-y-1 text-sm"
-              aria-labelledby="dropdownDefaultButton"
-            >
-              <li>
-                <a
-                  href="#"
-                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
-                >
-                  <i
-                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
-                  ></i>
-                  Bangkok
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
-                >
-                  <i
-                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
-                  ></i>
-                  Canada
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="flex items-center gap-x-3 p-1 text-sm font-semibold"
-                >
-                  <i
-                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-xl leading-6"
-                  ></i>
-                  Eroupe
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-x-4">
+        <button
+          type="button"
+          data-drawer-hide="drawer-left-example"
+          aria-controls="drawer-left-example"
+          class="flex items-center justify-center py-3"
+        >
+          <i class="bx bx-left-arrow-alt text-2xl leading-6"></i>
+        </button>
+        <p class="text-2xl font-bold">Plan selection</p>
       </div>
-    </div>
 
-    <!-- Datepicker -->
-    <div>
       <button
         type="button"
-        id="dropdown-when"
-        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+        data-drawer-hide="drawer-left-example"
+        aria-controls="drawer-left-example"
+        class="flex items-center justify-center py-3 text-sm underline"
       >
-        <div class="flex gap-x-2">
-          <i class="bx bx-calendar text-2xl leading-6"></i>
-          <p class="datepicker-title">When</p>
-        </div>
-        <p class="datepicker-selected text-sm font-semibold">From tomorrow</p>
+        Cancel
       </button>
     </div>
 
-    <!-- Members Selector -->
+    <!-- orderMembers Selector -->
     <div>
       <button
         type="button"
-        id="accordion-who"
+        id="orderAccordion-who"
         class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
       >
         <div class="flex gap-x-2">
           <i class="bx bx-user-pin text-2xl leading-6"></i>
-          <p class="member-title">Who</p>
+          <p class="orderMember-title">Guest</p>
         </div>
-        <p class="member-selected text-sm font-semibold">Only me</p>
+        <p class="text-sm font-semibold">1 Adult</p>
       </button>
       <div
-        id="member"
+        id="orderMember"
         class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
       >
         <div class="py-4">
@@ -238,13 +109,116 @@
       </div>
     </div>
 
-    <!-- Search Button -->
-    <a
-      href="../pages/searchResult-map.html"
-      class="fixed bottom-4 left-1/2 flex w-[327px] -translate-x-1/2 items-center justify-center rounded-lg bg-brand-300 py-3 font-semibold"
+    <!-- Datepicker -->
+    <div>
+      <button
+        type="button"
+        id="orderDropdown-when"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-calendar text-2xl leading-6"></i>
+          <p class="orderDatepicker-title">Date</p>
+        </div>
+        <p class="orderDatepicker-selected text-sm font-semibold">
+          Thu, Aug 1, 2024
+        </p>
+      </button>
+      <%- include('./src/components/orderDatepicker.ejs'); -%>
+    </div>
+
+    <!-- TimeSelected -->
+    <div>
+      <button
+        type="button"
+        id="orderAccordion-time"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-time-five text-2xl leading-6"></i>
+          <p class="orderTime-title">Time</p>
+        </div>
+      </button>
+      <div
+        id="orderTime"
+        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
+      >
+        <div class="pb-4 pt-2">
+          <div class="space-y-3 px-4 py-3">
+            <p class="text-sm">Fri, Aug 2, 2024</p>
+            <div class="flex gap-x-2">
+              <button
+                class="rounded-lg bg-brand-300 px-[26px] py-1 font-semibold text-brand-800"
+              >
+                07:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                14:00
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-3 px-4 py-3">
+            <p class="text-sm">Sat, Aug 3, 2024</p>
+            <div class="flex gap-x-2">
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                07:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                14:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                18:00
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-3 px-4 py-3">
+            <p class="text-sm">Mon, Aug 5, 2024</p>
+            <div class="flex gap-x-2">
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                07:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                14:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                18:00
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Step -->
+    <div
+      class="container fixed bottom-0 left-1/2 -translate-x-1/2 space-y-4 rounded-t-2xl bg-white py-4"
     >
-      <i class="bx bx-search-alt-2 me-2 text-2xl leading-6"></i>
-      Search
-    </a>
+      <div class="flex items-center gap-x-2">
+        <p class="text-xl font-bold">From $1,050 TWD /</p>
+        <p class="text-sm">person</p>
+      </div>
+      <button
+        type="button"
+        class="w-full rounded-lg bg-brand-300 py-3 text-center text-brand-800 opacity-40 transition-all hover:opacity-100 focus:opacity-100"
+      >
+        Next
+      </button>
+    </div>
   </div>
 </div>
