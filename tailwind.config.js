@@ -3,7 +3,9 @@ export default {
   content: ["./src/**/*.{html,js,ejs}", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        map: "url('/assets/img/map01.jpg')",
+      },
 
       fontSize: {},
 
