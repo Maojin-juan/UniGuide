@@ -5,33 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>搜尋結果 - 地圖模式</title>
   </head>
-  <body class="pt-[154px]">
+  <body>
     <nav class="fixed left-0 top-0 z-50 w-full bg-white">
-      <%- include('./src/layout/navbar.ejs'); -%> <%-
-      include('./src/layout/filter.ejs'); -%>
+      <div class="bg-white">
+        <!-- SearchInput -->
+        <div class="container">
+          <button
+            type="button"
+            class="flex w-full items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
+            data-drawer-target="drawer-left-example"
+            data-drawer-show="drawer-left-example"
+            data-drawer-placement="left"
+            aria-controls="drawer-left-example"
+          >
+            <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+            Where to?
+          </button>
+
+          <%- include('./src/components/orderModal.ejs'); -%>
+        </div>
+
+        <!-- Tabs -->
+        <div class="my-2 border-b border-neutral-100 text-center font-semibold">
+          <ul class="container -mb-px flex px-0">
+            <li class="relative w-full">
+              <a
+                href="#"
+                class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
+              >
+                Tour
+              </a>
+            </li>
+            <li class="relative w-full">
+              <a
+                href="#"
+                class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
+                aria-current="page"
+              >
+                Meet-up
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <%- include('./src/layout/filter.ejs'); -%>
     </nav>
 
-    <section>
+    <section class="fixed left-1/2 top-[92px] w-full -translate-x-1/2">
       <div
-        class="container relative h-[604px] w-full bg-[url('../assets/img/map01.jpg')] bg-cover bg-center"
+        class="container relative h-[604px] bg-[url('../assets/img/map01.jpg')] bg-cover bg-center"
       >
-        <a
-          href="#"
-          class="group absolute top-[321px] inline-block transition-all"
-        >
-          <img src="../assets/svg/Pin.svg" alt="Pin" />
+        <a href="#" class="absolute top-[211px]">
+          <img src="../assets/svg/RiverTrackingPin.svg" alt="RiverTracking" />
+        </a>
+        <a href="#" class="absolute left-[50px] top-[328px]">
+          <img src="../assets/svg/HikingPin.svg" alt="Hiking" />
+        </a>
+        <a href="#" class="absolute left-[68px] top-[241px]">
           <img
-            src="../assets/svg/RiverTracking.svg"
-            alt="RiverTracking"
-            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[80%]"
+            src="../assets/svg/RiverTrackingPin-black.svg"
+            alt="RiverTracking-black"
           />
         </a>
-
-        <img src="../assets/svg/Hiking.svg" alt="Hiking" />
-        <img src="../assets/svg/Surfing.svg" alt="Surfing" />
-        <img src="../assets/svg/Diving.svg" alt="Diving" />
-        <i class="bx bx-cycling"></i>
-        <i class="bx bx-swim"></i>
+        <a href="#" class="absolute left-[74px] top-[94px]">
+          <img src="../assets/svg/HikingPin.svg" alt="Hiking" />
+        </a>
+        <a href="#" class="absolute left-[96px] top-[167px]">
+          <img src="../assets/svg/ClimbingPin.svg" alt="Climbing" />
+        </a>
+        <a href="#" class="absolute left-[153px] top-[233px]">
+          <img src="../assets/svg/CyclingPin.svg" alt="Cycling" />
+        </a>
+        <a href="#" class="absolute left-[171px] top-[112px]">
+          <img src="../assets/svg/CyclingPin.svg" alt="Cycling" />
+        </a>
+        <a href="#" class="absolute left-[175px] top-[278px]">
+          <img src="../assets/svg/SkatingPin.svg" alt="Skating" />
+        </a>
+        <a href="#" class="absolute left-[183px] top-[221px]">
+          <img src="../assets/svg/SwimPin.svg" alt="Swim" />
+        </a>
+        <a href="#" class="absolute left-[229px] top-[204px]">
+          <img src="../assets/svg/WalkPin.svg" alt="Walk" />
+        </a>
+        <a href="#" class="absolute left-[260px] top-[74px]">
+          <img src="../assets/svg/SurfingPin.svg" alt="Surfing" />
+        </a>
+        <a href="#" class="absolute left-[241px] top-[99px]">
+          <img src="../assets/svg/DivingPin.svg" alt="Diving" />
+        </a>
+        <a href="#" class="absolute left-[248px] top-[139px]">
+          <img src="../assets/svg/SwimPin.svg" alt="Swim" />
+        </a>
       </div>
     </section>
 
@@ -64,34 +129,43 @@
           <!-- SwiperPagination -->
           <div class="swiper-pagination -mb-2"></div>
         </div>
-        <div class="w-[187px] rounded-e-2xl bg-white p-2">
-          <div class="flex items-center gap-x-1 text-sm">
-            <i class="bx bxs-star mb-[0.4px] leading-4"></i>
-            <span class="font-semibold">4.9</span>
-            <span class="text-neutral-400">(145)</span>
+        <div class="w-[187px] space-y-1 rounded-e-2xl bg-white p-3">
+          <div class="flex items-center justify-between text-sm">
+            <div class="flex items-center gap-x-1">
+              <i class="bx bxs-star mb-[0.4px] leading-4"></i>
+              <span class="font-semibold">4.9</span>
+              <span class="text-neutral-400">(145)</span>
+            </div>
+            <button>
+              <i class="bx bx-heart p-1.5 text-xl leading-5"></i>
+            </button>
           </div>
-          <p class="font-semibold">The Secret Stream Trekking Experience</p>
-          <div class="flex gap-x-1 text-xs">
+          <p class="pb-2 font-semibold">
+            The Secret Stream Trekking Experience
+          </p>
+          <div class="flex gap-x-1 text-xs leading-5">
             <p class="font-semibold">$1,050 TWD</p>
             <p>/ person</p>
           </div>
         </div>
       </div>
 
-      <div class="container space-y-4 rounded-t-2xl bg-white pb-[38px] pt-4">
+      <a
+        href="search-result.html"
+        class="container block w-full space-y-4 rounded-t-2xl bg-white pb-[38px] pt-4"
+      >
         <span
           class="mx-auto block h-1 w-8 max-w-none rounded-full bg-neutral-200"
         ></span>
         <div class="flex items-center justify-center gap-x-2">
-          <a
-            href="#"
+          <span
             class="text-brand-30 rounded-lg bg-brand-200 px-2 text-xs font-semibold leading-5"
           >
             300
-          </a>
+          </span>
           <p class="text-sm">Experiences</p>
         </div>
-      </div>
+      </a>
     </section>
 
     <script type="module" src="../main.js"></script>
