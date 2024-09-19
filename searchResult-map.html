@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搜尋結果 - 地圖模式</title>
+    <script type="module" crossorigin src="/uniGuide/assets/main-Cxb-H49q.js"></script>
+    <link rel="stylesheet" crossorigin href="/uniGuide/assets/main-Cl8_zs09.css">
+  </head>
+  <body>
+    <nav class="fixed left-0 top-0 z-50 w-full bg-white">
+      <div class="bg-white">
+        <!-- SearchInput -->
+        <div class="container">
+          <button
+            type="button"
+            class="flex w-full items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
+            data-drawer-target="drawer-left-example"
+            data-drawer-show="drawer-left-example"
+            data-drawer-placement="left"
+            aria-controls="drawer-left-example"
+          >
+            <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+            Where to?
+          </button>
+
+          <div
+  id="drawer-left-example"
+  class="fixed left-0 top-0 z-10 h-screen w-full -translate-x-full overflow-y-auto bg-[#F5F6F6] pb-36 transition-transform"
+  tabindex="-1"
+  aria-labelledby="drawer-left-label"
+>
+  <div class="container relative space-y-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-x-4">
+        <button
+          type="button"
+          data-drawer-hide="drawer-left-example"
+          aria-controls="drawer-left-example"
+          class="flex items-center justify-center py-3"
+        >
+          <i class="bx bx-left-arrow-alt text-2xl leading-6"></i>
+        </button>
+        <p class="text-2xl font-bold">Plan selection</p>
+      </div>
+
+      <button
+        type="button"
+        data-drawer-hide="drawer-left-example"
+        aria-controls="drawer-left-example"
+        class="flex items-center justify-center py-3 text-sm underline"
+      >
+        Cancel
+      </button>
+    </div>
+
+    <!-- orderMembers Selector -->
+    <div>
+      <button
+        type="button"
+        id="orderAccordion-who"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-user-pin text-2xl leading-6"></i>
+          <p class="orderMember-title">Guest</p>
+        </div>
+        <p class="text-sm font-semibold">1 Adult</p>
+      </button>
+      <div
+        id="orderMember"
+        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
+      >
+        <div class="py-4">
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Adult</p>
+              <p class="text-xs text-[#6A706F]">Age 13 or above</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">1</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Child</p>
+              <p class="text-xs text-[#6A706F]">2-12 years old</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Toddler</p>
+              <p class="text-xs text-[#6A706F]">Under 2 years old</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Pet</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Datepicker -->
+    <div>
+      <button
+        type="button"
+        id="orderDropdown-when"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-calendar text-2xl leading-6"></i>
+          <p class="orderDatepicker-title">Date</p>
+        </div>
+        <p class="orderDatepicker-selected text-sm font-semibold">
+          Thu, Aug 1, 2024
+        </p>
+      </button>
+      <div
+  id="orderDatepicker"
+  class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
+>
+  <div class="px-3 py-4">
+    <div class="mb-6 flex items-center justify-between">
+      <p class="ps-2 text-sm font-semibold">August 2024</p>
+      <div class="space-x-2 text-2xl leading-6">
+        <a href="#">
+          <i class="bx bx-chevron-left text-[#E6E7E7]"></i>
+        </a>
+        <a href="#"><i class="bx bx-chevron-right text-[#6A706F]"></i></a>
+      </div>
+    </div>
+    <div id="orderCalendar"></div>
+  </div>
+</div>
+    </div>
+
+    <!-- TimeSelected -->
+    <div>
+      <button
+        type="button"
+        id="orderAccordion-time"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-time-five text-2xl leading-6"></i>
+          <p class="orderTime-title">Time</p>
+        </div>
+      </button>
+      <div
+        id="orderTime"
+        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
+      >
+        <div class="pb-4 pt-2">
+          <div class="space-y-3 px-4 py-3">
+            <p class="text-sm">Fri, Aug 2, 2024</p>
+            <div class="flex gap-x-2">
+              <button
+                class="rounded-lg bg-brand-300 px-[26px] py-1 font-semibold text-brand-800"
+              >
+                07:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                14:00
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-3 px-4 py-3">
+            <p class="text-sm">Sat, Aug 3, 2024</p>
+            <div class="flex gap-x-2">
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                07:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                14:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                18:00
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-3 px-4 py-3">
+            <p class="text-sm">Mon, Aug 5, 2024</p>
+            <div class="flex gap-x-2">
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                07:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                14:00
+              </button>
+              <button
+                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
+              >
+                18:00
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Step -->
+    <div
+      class="container fixed bottom-0 left-1/2 -translate-x-1/2 space-y-4 rounded-t-2xl bg-white py-4"
+    >
+      <div class="flex items-center gap-x-2">
+        <p class="text-xl font-bold">From $1,050 TWD /</p>
+        <p class="text-sm">person</p>
+      </div>
+      <button
+        type="button"
+        class="w-full rounded-lg bg-brand-300 py-3 text-center text-brand-800 opacity-40 transition-all hover:opacity-100 focus:opacity-100"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="my-2 border-b border-neutral-100 text-center font-semibold">
+          <ul class="container -mb-px flex px-0">
+            <li class="relative w-full">
+              <a
+                href="#"
+                class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
+              >
+                Tour
+              </a>
+            </li>
+            <li class="relative w-full">
+              <a
+                href="#"
+                class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
+                aria-current="page"
+              >
+                Meet-up
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 篩選按鈕 -->
+<div class="container bg-white overflow-x-scroll py-2">
+  <ul class="flex items-center gap-2 whitespace-nowrap">
+    <li>
+      <a href="#">
+        <i
+          class="bx bx-slider-alt bx-xs bx-border-circle dark:focus:ring-brand-60 border-neutral-300 p-2 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+        ></i>
+      </a>
+    </li>
+    <!-- Languages -->
+    <li>
+      <!-- Languages button -->
+      <button
+        id="dropdownBgHoverButton1"
+        data-dropdown-toggle="dropdownBgHover1"
+        class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-brand-600 bg-brand-50 px-4 py-1.5 text-center text-sm font-medium text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+        type="button"
+      >
+        Language
+        <span class="ms-2">(2)</span>
+      </button>
+      <!-- Languages Dropdown menu -->
+      <div
+        id="dropdownBgHover1"
+        class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
+      >
+        <ul
+          class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownBgHoverButton1"
+        >
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                checked
+                id="checkbox-item-1-1"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-1-1"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                English
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                checked
+                id="checkbox-item-1-2"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-1-2"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                繁體中文
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-1-3"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-1-3"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                Default checkbox
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- Activity  -->
+    <li>
+      <!-- Activity button -->
+      <button
+        id="dropdownBgHoverButton2"
+        data-dropdown-toggle="dropdownBgHover2"
+        class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+        type="button"
+      >
+        Activity Types
+        <svg
+          class="ms-3 h-2.5 w-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"
+          />
+        </svg>
+      </button>
+      <!-- Activity Dropdown menu -->
+      <div
+        id="dropdownBgHover2"
+        class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
+      >
+        <ul
+          class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownBgHoverButton2"
+        >
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-2-1"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-2-1"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                Type 1
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                checked
+                id="checkbox-item-2-2"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-2-2"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                Type 2
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-2-3"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-2-3"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                Type 3
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- Price  -->
+    <li>
+      <!-- Price Button -->
+      <button
+        id="dropdownBgHoverButton3"
+        data-dropdown-toggle="dropdownBgHover3"
+        class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+        type="button"
+      >
+        Price
+        <svg
+          class="ms-3 h-2.5 w-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"
+          />
+        </svg>
+      </button>
+      <!-- Price Dropdown menu -->
+      <div
+        id="dropdownBgHover3"
+        class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
+      >
+        <ul
+          class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownBgHoverButton3"
+        >
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-3-1"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-3-1"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                Price 1
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                checked
+                id="checkbox-item-3-2"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-3-2"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                Price 2
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-3-3"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-3-3"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                Price 3
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- 其他篩選 4  -->
+    <li>
+      <!-- 其他篩選 4 Button -->
+      <button
+        id="dropdownBgHoverButton4"
+        data-dropdown-toggle="dropdownBgHover4"
+        class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+        type="button"
+      >
+        其他篩選 4
+        <svg
+          class="ms-3 h-2.5 w-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"
+          />
+        </svg>
+      </button>
+      <!-- 其他篩選 4 Dropdown menu -->
+      <div
+        id="dropdownBgHover4"
+        class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
+      >
+        <ul
+          class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownBgHoverButton4"
+        >
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-4-1"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-4-1"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 4-1
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                checked
+                id="checkbox-item-4-2"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-4-2"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 4-2
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-4-3"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-4-3"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 4-3
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- 其他篩選 5  -->
+    <li>
+      <!-- 其他篩選 5 Button -->
+      <button
+        id="dropdownBgHoverButton5"
+        data-dropdown-toggle="dropdownBgHover5"
+        class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+        type="button"
+      >
+        其他篩選 5
+        <svg
+          class="ms-3 h-2.5 w-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"
+          />
+        </svg>
+      </button>
+      <!-- 其他篩選 5 Dropdown menu -->
+      <div
+        id="dropdownBgHover5"
+        class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
+      >
+        <ul
+          class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownBgHoverButton4"
+        >
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-5-1"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-5-1"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 5-1
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                checked
+                id="checkbox-item-5-2"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-5-2"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 5-2
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-5-3"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-5-3"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 5-3
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- 其他篩選 6  -->
+    <li>
+      <!-- 其他篩選 5 Button -->
+      <button
+        id="dropdownBgHoverButton6"
+        data-dropdown-toggle="dropdownBgHover6"
+        class="dark:focus:ring-brand-60 inline-flex items-baseline rounded-full border border-neutral-300 px-4 py-1.5 text-center text-sm font-medium text-neutral-900 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700 focus:border-brand-600 focus:bg-brand-50 focus:text-brand-700 focus:outline-none active:border-brand-600 dark:bg-brand-400 dark:hover:bg-brand-500"
+        type="button"
+      >
+        其他篩選 6
+        <svg
+          class="ms-3 h-2.5 w-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"
+          />
+        </svg>
+      </button>
+      <!-- 其他篩選 6 Dropdown menu -->
+      <div
+        id="dropdownBgHover6"
+        class="z-10 hidden w-48 rounded-lg bg-white shadow dark:bg-gray-700"
+      >
+        <ul
+          class="space-y-1 p-3 text-base text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownBgHoverButton4"
+        >
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-6-1"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-6-1"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 6-1
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                checked
+                id="checkbox-item-6-2"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-6-2"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 6-2
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="flex items-center rounded p-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+            >
+              <input
+                id="checkbox-item-6-3"
+                type="checkbox"
+                value=""
+                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-neutral-950 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700"
+              />
+              <label
+                for="checkbox-item-6-3"
+                class="ms-2 w-full rounded text-base font-medium text-gray-900 dark:text-gray-300"
+              >
+                其他篩選 6-3
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>    </nav>
+
+    <section class="fixed left-1/2 top-[92px] w-full -translate-x-1/2">
+      <div class="bg-map container relative h-[604px] bg-cover bg-center">
+        <a href="#" class="absolute top-[211px]">
+          <img src="data:image/svg+xml,%3csvg%20width='48'%20height='52'%20viewBox='0%200%2048%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_dd_13136_11000)'%3e%3cpath%20d='M24%202C14.0589%202%206%2010.0589%206%2020C6%2029.0307%2012.6504%2036.5081%2021.3209%2037.802L23.1019%2041.4398C23.4676%2042.1868%2024.5324%2042.1868%2024.8981%2041.4398L26.6791%2037.802C35.3496%2036.5081%2042%2029.0307%2042%2020C42%2010.0589%2033.9411%202%2024%202Z'%20fill='white'/%3e%3cpath%20d='M21.7699%2037.5821L21.6544%2037.3462L21.3946%2037.3074C12.9655%2036.0496%206.5%2028.7794%206.5%2020C6.5%2010.335%2014.335%202.5%2024%202.5C33.665%202.5%2041.5%2010.335%2041.5%2020C41.5%2028.7794%2035.0345%2036.0496%2026.6054%2037.3074L26.3456%2037.3462L26.2301%2037.5821L24.4491%2041.2199C24.2662%2041.5935%2023.7338%2041.5935%2023.5509%2041.2199L21.7699%2037.5821Z'%20stroke='%23E6E7E7'/%3e%3c/g%3e%3cpath%20d='M19.8366%2017.7971L23.8584%2012.5074L22.7537%2011.666L18.5349%2017.2155H15.6732V24.1638H19.8366V17.7971ZM18.4488%2022.7741H17.061V18.6052H18.4488V22.7741ZM28.1634%2024.1638H32.3267V17.2155H29.4651L25.2462%2011.666L24.1415%2012.5074L28.1634%2017.7971V24.1638ZM29.5511%2018.6052H30.9389V22.7741H29.5511V18.6052ZM32.3337%2027.3815C31.8063%2027.986%2031.0458%2028.3327%2030.245%2028.3327C29.4117%2028.3327%2028.6727%2027.9561%2028.1634%2027.3724C27.654%2027.9561%2026.915%2028.3327%2026.0817%2028.3327C25.2483%2028.3327%2024.5093%2027.9561%2024%2027.3724C23.4907%2027.9561%2022.751%2028.3327%2021.9183%2028.3327C21.0856%2028.3327%2020.3459%2027.9561%2019.8366%2027.3724C19.3273%2027.9561%2018.5876%2028.3327%2017.7549%2028.3327C16.9549%2028.3327%2016.1937%2027.986%2015.667%2027.3822L16.712%2026.4678C16.9757%2026.7707%2017.3559%2026.9437%2017.7549%2026.9437C18.5203%2026.9437%2019.1427%2026.3205%2019.1427%2025.5541H20.5305C20.5305%2026.3205%2021.1529%2026.9437%2021.9183%2026.9437C22.6837%2026.9437%2023.3061%2026.3205%2023.3061%2025.5541H24.6939C24.6939%2026.3205%2025.3163%2026.9437%2026.0817%2026.9437C26.847%2026.9437%2027.4695%2026.3205%2027.4695%2025.5541H28.8572C28.8572%2026.3205%2029.4797%2026.9437%2030.245%2026.9437C30.644%2026.9437%2031.0243%2026.7707%2031.2873%2026.4685L32.3337%2027.3815Z'%20fill='%23141515'/%3e%3cdefs%3e%3cfilter%20id='filter0_dd_13136_11000'%20x='0'%20y='0'%20width='48'%20height='52'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect1_dropShadow_13136_11000'/%3e%3cfeOffset%20dy='2'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_13136_11000'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect2_dropShadow_13136_11000'/%3e%3cfeOffset%20dy='4'/%3e%3cfeGaussianBlur%20stdDeviation='4'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1%200'/%3e%3cfeBlend%20mode='normal'%20in2='effect1_dropShadow_13136_11000'%20result='effect2_dropShadow_13136_11000'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect2_dropShadow_13136_11000'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="RiverTracking" />
+        </a>
+        <a href="#" class="absolute left-[50px] top-[328px]">
+          <img src="/uniGuide/assets/HikingPin-X4oL4NfU.svg" alt="Hiking" />
+        </a>
+        <a href="#" class="absolute left-[68px] top-[241px]">
+          <img
+            src="data:image/svg+xml,%3csvg%20width='48'%20height='52'%20viewBox='0%200%2048%2052'%20fill='%23141515'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_dd_13136_11000)'%3e%3cpath%20d='M24%202C14.0589%202%206%2010.0589%206%2020C6%2029.0307%2012.6504%2036.5081%2021.3209%2037.802L23.1019%2041.4398C23.4676%2042.1868%2024.5324%2042.1868%2024.8981%2041.4398L26.6791%2037.802C35.3496%2036.5081%2042%2029.0307%2042%2020C42%2010.0589%2033.9411%202%2024%202Z'%20fill='white'/%3e%3cpath%20d='M21.7699%2037.5821L21.6544%2037.3462L21.3946%2037.3074C12.9655%2036.0496%206.5%2028.7794%206.5%2020C6.5%2010.335%2014.335%202.5%2024%202.5C33.665%202.5%2041.5%2010.335%2041.5%2020C41.5%2028.7794%2035.0345%2036.0496%2026.6054%2037.3074L26.3456%2037.3462L26.2301%2037.5821L24.4491%2041.2199C24.2662%2041.5935%2023.7338%2041.5935%2023.5509%2041.2199L21.7699%2037.5821Z'%20stroke='%23444645'/%3e%3c/g%3e%3cpath%20d='M19.8366%2017.7971L23.8584%2012.5074L22.7537%2011.666L18.5349%2017.2155H15.6732V24.1638H19.8366V17.7971ZM18.4488%2022.7741H17.061V18.6052H18.4488V22.7741ZM28.1634%2024.1638H32.3267V17.2155H29.4651L25.2462%2011.666L24.1415%2012.5074L28.1634%2017.7971V24.1638ZM29.5511%2018.6052H30.9389V22.7741H29.5511V18.6052ZM32.3337%2027.3815C31.8063%2027.986%2031.0458%2028.3327%2030.245%2028.3327C29.4117%2028.3327%2028.6727%2027.9561%2028.1634%2027.3724C27.654%2027.9561%2026.915%2028.3327%2026.0817%2028.3327C25.2483%2028.3327%2024.5093%2027.9561%2024%2027.3724C23.4907%2027.9561%2022.751%2028.3327%2021.9183%2028.3327C21.0856%2028.3327%2020.3459%2027.9561%2019.8366%2027.3724C19.3273%2027.9561%2018.5876%2028.3327%2017.7549%2028.3327C16.9549%2028.3327%2016.1937%2027.986%2015.667%2027.3822L16.712%2026.4678C16.9757%2026.7707%2017.3559%2026.9437%2017.7549%2026.9437C18.5203%2026.9437%2019.1427%2026.3205%2019.1427%2025.5541H20.5305C20.5305%2026.3205%2021.1529%2026.9437%2021.9183%2026.9437C22.6837%2026.9437%2023.3061%2026.3205%2023.3061%2025.5541H24.6939C24.6939%2026.3205%2025.3163%2026.9437%2026.0817%2026.9437C26.847%2026.9437%2027.4695%2026.3205%2027.4695%2025.5541H28.8572C28.8572%2026.3205%2029.4797%2026.9437%2030.245%2026.9437C30.644%2026.9437%2031.0243%2026.7707%2031.2873%2026.4685L32.3337%2027.3815Z'%20fill='%23C9EF2C'/%3e%3cdefs%3e%3cfilter%20id='filter0_dd_13136_11000'%20x='0'%20y='0'%20width='48'%20height='52'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect1_dropShadow_13136_11000'/%3e%3cfeOffset%20dy='2'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_13136_11000'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect2_dropShadow_13136_11000'/%3e%3cfeOffset%20dy='4'/%3e%3cfeGaussianBlur%20stdDeviation='4'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1%200'/%3e%3cfeBlend%20mode='normal'%20in2='effect1_dropShadow_13136_11000'%20result='effect2_dropShadow_13136_11000'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect2_dropShadow_13136_11000'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e"
+            alt="RiverTracking-black"
+          />
+        </a>
+        <a href="#" class="absolute left-[74px] top-[94px]">
+          <img src="/uniGuide/assets/HikingPin-X4oL4NfU.svg" alt="Hiking" />
+        </a>
+        <a href="#" class="absolute left-[96px] top-[167px]">
+          <img src="/uniGuide/assets/ClimbingPin-GZVAoYlf.svg" alt="Climbing" />
+        </a>
+        <a href="#" class="absolute left-[153px] top-[233px]">
+          <img src="data:image/svg+xml,%3csvg%20width='48'%20height='52'%20viewBox='0%200%2048%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_dd_13136_10996)'%3e%3cpath%20d='M24%202C14.0589%202%206%2010.0589%206%2020C6%2029.0307%2012.6504%2036.5081%2021.3209%2037.802L23.1019%2041.4398C23.4676%2042.1868%2024.5324%2042.1868%2024.8981%2041.4398L26.6791%2037.802C35.3496%2036.5081%2042%2029.0307%2042%2020C42%2010.0589%2033.9411%202%2024%202Z'%20fill='white'/%3e%3cpath%20d='M21.7699%2037.5821L21.6544%2037.3462L21.3946%2037.3074C12.9655%2036.0496%206.5%2028.7794%206.5%2020C6.5%2010.335%2014.335%202.5%2024%202.5C33.665%202.5%2041.5%2010.335%2041.5%2020C41.5%2028.7794%2035.0345%2036.0496%2026.6054%2037.3074L26.3456%2037.3462L26.2301%2037.5821L24.4491%2041.2199C24.2662%2041.5935%2023.7338%2041.5935%2023.5509%2041.2199L21.7699%2037.5821Z'%20stroke='%23E6E7E7'/%3e%3c/g%3e%3cpath%20d='M21.9999%2019.8298L24.8299%2016.9998L26.9499%2019.1198C27.2899%2019.4598%2027.7599%2019.6598%2028.2399%2019.6598H31.6499V18.0098H28.1699L24.4099%2014.2498C24.3299%2014.1698%2024.2399%2014.1098%2024.1399%2014.0698C23.9399%2013.9898%2023.7099%2013.9898%2023.5099%2014.0698C23.4099%2014.1098%2023.3199%2014.1698%2023.2399%2014.2498L19.9499%2017.5398C19.6099%2017.8798%2019.4199%2018.3398%2019.4199%2018.8298C19.4199%2019.3198%2019.6099%2019.7798%2019.9499%2020.1198L22.9999%2023.1698V27.6498H24.6499V23.2398C24.6499%2022.7598%2024.4499%2022.2898%2024.1199%2021.9498L21.9999%2019.8298Z'%20fill='%23141515'/%3e%3cpath%20d='M27.83%2014.66C28.8407%2014.66%2029.66%2013.8407%2029.66%2012.83C29.66%2011.8193%2028.8407%2011%2027.83%2011C26.8193%2011%2026%2011.8193%2026%2012.83C26%2013.8407%2026.8193%2014.66%2027.83%2014.66Z'%20fill='%23141515'/%3e%3cpath%20d='M33.66%2025.83C33.66%2023.72%2031.94%2022%2029.83%2022C27.72%2022%2026%2023.72%2026%2025.83C26%2027.94%2027.72%2029.66%2029.83%2029.66C31.94%2029.66%2033.66%2027.94%2033.66%2025.83ZM29.83%2028C28.63%2028%2027.66%2027.02%2027.66%2025.83C27.66%2024.64%2028.64%2023.66%2029.83%2023.66C31.02%2023.66%2032%2024.64%2032%2025.83C32%2027.02%2031.02%2028%2029.83%2028Z'%20fill='%23141515'/%3e%3cpath%20d='M21.66%2025.83C21.66%2023.72%2019.94%2022%2017.83%2022C15.72%2022%2014%2023.72%2014%2025.83C14%2027.94%2015.72%2029.66%2017.83%2029.66C19.94%2029.66%2021.66%2027.94%2021.66%2025.83ZM17.83%2028C16.63%2028%2015.66%2027.02%2015.66%2025.83C15.66%2024.64%2016.64%2023.66%2017.83%2023.66C19.02%2023.66%2020%2024.64%2020%2025.83C20%2027.02%2019.02%2028%2017.83%2028Z'%20fill='%23141515'/%3e%3cdefs%3e%3cfilter%20id='filter0_dd_13136_10996'%20x='0'%20y='0'%20width='48'%20height='52'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect1_dropShadow_13136_10996'/%3e%3cfeOffset%20dy='2'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_13136_10996'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect2_dropShadow_13136_10996'/%3e%3cfeOffset%20dy='4'/%3e%3cfeGaussianBlur%20stdDeviation='4'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1%200'/%3e%3cfeBlend%20mode='normal'%20in2='effect1_dropShadow_13136_10996'%20result='effect2_dropShadow_13136_10996'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect2_dropShadow_13136_10996'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="Cycling" />
+        </a>
+        <a href="#" class="absolute left-[171px] top-[112px]">
+          <img src="data:image/svg+xml,%3csvg%20width='48'%20height='52'%20viewBox='0%200%2048%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_dd_13136_10996)'%3e%3cpath%20d='M24%202C14.0589%202%206%2010.0589%206%2020C6%2029.0307%2012.6504%2036.5081%2021.3209%2037.802L23.1019%2041.4398C23.4676%2042.1868%2024.5324%2042.1868%2024.8981%2041.4398L26.6791%2037.802C35.3496%2036.5081%2042%2029.0307%2042%2020C42%2010.0589%2033.9411%202%2024%202Z'%20fill='white'/%3e%3cpath%20d='M21.7699%2037.5821L21.6544%2037.3462L21.3946%2037.3074C12.9655%2036.0496%206.5%2028.7794%206.5%2020C6.5%2010.335%2014.335%202.5%2024%202.5C33.665%202.5%2041.5%2010.335%2041.5%2020C41.5%2028.7794%2035.0345%2036.0496%2026.6054%2037.3074L26.3456%2037.3462L26.2301%2037.5821L24.4491%2041.2199C24.2662%2041.5935%2023.7338%2041.5935%2023.5509%2041.2199L21.7699%2037.5821Z'%20stroke='%23E6E7E7'/%3e%3c/g%3e%3cpath%20d='M21.9999%2019.8298L24.8299%2016.9998L26.9499%2019.1198C27.2899%2019.4598%2027.7599%2019.6598%2028.2399%2019.6598H31.6499V18.0098H28.1699L24.4099%2014.2498C24.3299%2014.1698%2024.2399%2014.1098%2024.1399%2014.0698C23.9399%2013.9898%2023.7099%2013.9898%2023.5099%2014.0698C23.4099%2014.1098%2023.3199%2014.1698%2023.2399%2014.2498L19.9499%2017.5398C19.6099%2017.8798%2019.4199%2018.3398%2019.4199%2018.8298C19.4199%2019.3198%2019.6099%2019.7798%2019.9499%2020.1198L22.9999%2023.1698V27.6498H24.6499V23.2398C24.6499%2022.7598%2024.4499%2022.2898%2024.1199%2021.9498L21.9999%2019.8298Z'%20fill='%23141515'/%3e%3cpath%20d='M27.83%2014.66C28.8407%2014.66%2029.66%2013.8407%2029.66%2012.83C29.66%2011.8193%2028.8407%2011%2027.83%2011C26.8193%2011%2026%2011.8193%2026%2012.83C26%2013.8407%2026.8193%2014.66%2027.83%2014.66Z'%20fill='%23141515'/%3e%3cpath%20d='M33.66%2025.83C33.66%2023.72%2031.94%2022%2029.83%2022C27.72%2022%2026%2023.72%2026%2025.83C26%2027.94%2027.72%2029.66%2029.83%2029.66C31.94%2029.66%2033.66%2027.94%2033.66%2025.83ZM29.83%2028C28.63%2028%2027.66%2027.02%2027.66%2025.83C27.66%2024.64%2028.64%2023.66%2029.83%2023.66C31.02%2023.66%2032%2024.64%2032%2025.83C32%2027.02%2031.02%2028%2029.83%2028Z'%20fill='%23141515'/%3e%3cpath%20d='M21.66%2025.83C21.66%2023.72%2019.94%2022%2017.83%2022C15.72%2022%2014%2023.72%2014%2025.83C14%2027.94%2015.72%2029.66%2017.83%2029.66C19.94%2029.66%2021.66%2027.94%2021.66%2025.83ZM17.83%2028C16.63%2028%2015.66%2027.02%2015.66%2025.83C15.66%2024.64%2016.64%2023.66%2017.83%2023.66C19.02%2023.66%2020%2024.64%2020%2025.83C20%2027.02%2019.02%2028%2017.83%2028Z'%20fill='%23141515'/%3e%3cdefs%3e%3cfilter%20id='filter0_dd_13136_10996'%20x='0'%20y='0'%20width='48'%20height='52'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect1_dropShadow_13136_10996'/%3e%3cfeOffset%20dy='2'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_13136_10996'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect2_dropShadow_13136_10996'/%3e%3cfeOffset%20dy='4'/%3e%3cfeGaussianBlur%20stdDeviation='4'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1%200'/%3e%3cfeBlend%20mode='normal'%20in2='effect1_dropShadow_13136_10996'%20result='effect2_dropShadow_13136_10996'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect2_dropShadow_13136_10996'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="Cycling" />
+        </a>
+        <a href="#" class="absolute left-[175px] top-[278px]">
+          <img src="/uniGuide/assets/SkatingPin-DxwktR9D.svg" alt="Skating" />
+        </a>
+        <a href="#" class="absolute left-[183px] top-[221px]">
+          <img src="/uniGuide/assets/SwimPin-Bi8EOIk9.svg" alt="Swim" />
+        </a>
+        <a href="#" class="absolute left-[229px] top-[204px]">
+          <img src="data:image/svg+xml,%3csvg%20width='48'%20height='52'%20viewBox='0%200%2048%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_dd_13136_10995)'%3e%3cpath%20d='M24%202C14.0589%202%206%2010.0589%206%2020C6%2029.0307%2012.6504%2036.5081%2021.3209%2037.802L23.1019%2041.4398C23.4676%2042.1868%2024.5324%2042.1868%2024.8981%2041.4398L26.6791%2037.802C35.3496%2036.5081%2042%2029.0307%2042%2020C42%2010.0589%2033.9411%202%2024%202Z'%20fill='white'/%3e%3cpath%20d='M21.7699%2037.5821L21.6544%2037.3462L21.3946%2037.3074C12.9655%2036.0496%206.5%2028.7794%206.5%2020C6.5%2010.335%2014.335%202.5%2024%202.5C33.665%202.5%2041.5%2010.335%2041.5%2020C41.5%2028.7794%2035.0345%2036.0496%2026.6054%2037.3074L26.3456%2037.3462L26.2301%2037.5821L24.4491%2041.2199C24.2662%2041.5935%2023.7338%2041.5935%2023.5509%2041.2199L21.7699%2037.5821Z'%20stroke='%23E6E7E7'/%3e%3c/g%3e%3cpath%20d='M25.6503%2013.66C26.661%2013.66%2027.4803%2012.8407%2027.4803%2011.83C27.4803%2010.8193%2026.661%2010%2025.6503%2010C24.6396%2010%2023.8203%2010.8193%2023.8203%2011.83C23.8203%2012.8407%2024.6396%2013.66%2025.6503%2013.66Z'%20fill='%23141515'/%3e%3cpath%20d='M28.18%2019.1398L28.15%2019.0898L26.49%2016.5898C26.31%2016.3298%2026.07%2016.1098%2025.79%2015.9698L24.36%2015.2498C23.97%2015.0498%2023.52%2015.0098%2023.1%2015.1098L19.91%2015.9098C19.65%2015.9698%2019.42%2016.0898%2019.21%2016.2598C19%2016.4298%2018.84%2016.6298%2018.72%2016.8698L17%2020.2998L18.48%2021.0398L20.23%2017.5398L22.8%2016.8998L20.92%2025.5898L20.86%2025.6298L17.33%2028.0598L18.2599%2029.4198L21.79%2026.9898C22.17%2026.7298%2022.44%2026.3298%2022.54%2025.8698L23.11%2023.2098L25.9%2025.2998V25.3698L26.8%2029.8198L28.42%2029.4998L27.53%2025.0398C27.44%2024.5998%2027.19%2024.2098%2026.83%2023.9398L24.5699%2022.2498L25.31%2017.8198L26.7599%2019.9998C26.9799%2020.3298%2027.32%2020.5898%2027.7%2020.7198L30.21%2021.5598L30.73%2019.9998L28.16%2019.1498L28.18%2019.1398Z'%20fill='%23141515'/%3e%3cdefs%3e%3cfilter%20id='filter0_dd_13136_10995'%20x='0'%20y='0'%20width='48'%20height='52'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect1_dropShadow_13136_10995'/%3e%3cfeOffset%20dy='2'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_13136_10995'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect2_dropShadow_13136_10995'/%3e%3cfeOffset%20dy='4'/%3e%3cfeGaussianBlur%20stdDeviation='4'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1%200'/%3e%3cfeBlend%20mode='normal'%20in2='effect1_dropShadow_13136_10995'%20result='effect2_dropShadow_13136_10995'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect2_dropShadow_13136_10995'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="Walk" />
+        </a>
+        <a href="#" class="absolute left-[260px] top-[74px]">
+          <img src="data:image/svg+xml,%3csvg%20width='48'%20height='52'%20viewBox='0%200%2048%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_dd_13136_10993)'%3e%3cpath%20d='M24%202C14.0589%202%206%2010.0589%206%2020C6%2029.0307%2012.6504%2036.5081%2021.3209%2037.802L23.1019%2041.4398C23.4676%2042.1868%2024.5324%2042.1868%2024.8981%2041.4398L26.6791%2037.802C35.3496%2036.5081%2042%2029.0307%2042%2020C42%2010.0589%2033.9411%202%2024%202Z'%20fill='white'/%3e%3cpath%20d='M21.7699%2037.5821L21.6544%2037.3462L21.3946%2037.3074C12.9655%2036.0496%206.5%2028.7794%206.5%2020C6.5%2010.335%2014.335%202.5%2024%202.5C33.665%202.5%2041.5%2010.335%2041.5%2020C41.5%2028.7794%2035.0345%2036.0496%2026.6054%2037.3074L26.3456%2037.3462L26.2301%2037.5821L24.4491%2041.2199C24.2662%2041.5935%2023.7338%2041.5935%2023.5509%2041.2199L21.7699%2037.5821Z'%20stroke='%23E6E7E7'/%3e%3c/g%3e%3cpath%20d='M18.9503%2028.1243L19.2753%2027.9993C22.6587%2026.8077%2025.792%2024.841%2028.3337%2022.316C31.267%2019.3827%2031.942%2015.4077%2032.092%2013.841C32.117%2013.5493%2032.092%2013.2576%2031.992%2012.9826C31.892%2012.7076%2031.7337%2012.4576%2031.5337%2012.2493C31.3253%2012.041%2031.0753%2011.8826%2030.8087%2011.7826C30.6003%2011.7076%2030.3753%2011.666%2030.1503%2011.666C30.0837%2011.666%2030.017%2011.666%2029.9587%2011.6743C28.392%2011.8243%2024.4253%2012.4993%2021.492%2015.441C18.9587%2017.9743%2016.992%2021.1076%2015.8003%2024.491L15.667%2024.816C15.667%2024.816%2015.667%2024.866%2015.6837%2024.8743L18.9087%2028.1077C18.9087%2028.1077%2018.9503%2028.1327%2018.9753%2028.116L18.9503%2028.1243ZM18.6503%2026.0827C18.6503%2026.016%2018.6753%2025.941%2018.7253%2025.8993L26.942%2017.6743C26.942%2017.6743%2026.9587%2017.6493%2026.9587%2017.6327C26.9587%2017.616%2026.9587%2017.5993%2026.942%2017.591L26.192%2016.8326C26.192%2016.8326%2026.1337%2016.8076%2026.1087%2016.8326L17.892%2025.0576C17.792%2025.1576%2017.617%2025.1576%2017.517%2025.0576L17.1503%2024.691C17.0753%2024.616%2017.0503%2024.5077%2017.092%2024.4077C18.242%2021.3327%2020.0003%2018.5993%2022.317%2016.2743C24.9837%2013.6077%2028.6253%2012.991%2030.067%2012.8577C30.1837%2012.8493%2030.3003%2012.8577%2030.4087%2012.8993C30.517%2012.941%2030.617%2012.9993%2030.7003%2013.0826C30.7837%2013.166%2030.8503%2013.266%2030.8837%2013.3743C30.9253%2013.4827%2030.942%2013.5993%2030.9253%2013.716C30.7837%2015.166%2030.1587%2018.816%2027.5003%2021.466C25.217%2023.7576%2022.4003%2025.566%2019.367%2026.6826C19.3337%2026.691%2019.3087%2026.6993%2019.2753%2026.6993C19.2087%2026.6993%2019.1337%2026.6743%2019.0837%2026.6243L18.7253%2026.266C18.6753%2026.216%2018.6503%2026.1493%2018.6503%2026.0743V26.0827Z'%20fill='%23141515'/%3e%3cdefs%3e%3cfilter%20id='filter0_dd_13136_10993'%20x='0'%20y='0'%20width='48'%20height='52'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect1_dropShadow_13136_10993'/%3e%3cfeOffset%20dy='2'/%3e%3cfeGaussianBlur%20stdDeviation='2'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_13136_10993'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeMorphology%20radius='2'%20operator='erode'%20in='SourceAlpha'%20result='effect2_dropShadow_13136_10993'/%3e%3cfeOffset%20dy='4'/%3e%3cfeGaussianBlur%20stdDeviation='4'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.1%200'/%3e%3cfeBlend%20mode='normal'%20in2='effect1_dropShadow_13136_10993'%20result='effect2_dropShadow_13136_10993'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect2_dropShadow_13136_10993'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e" alt="Surfing" />
+        </a>
+        <a href="#" class="absolute left-[241px] top-[99px]">
+          <img src="/uniGuide/assets/DivingPin-BGwcBHID.svg" alt="Diving" />
+        </a>
+        <a href="#" class="absolute left-[248px] top-[139px]">
+          <img src="/uniGuide/assets/SwimPin-Bi8EOIk9.svg" alt="Swim" />
+        </a>
+      </div>
+    </section>
+
+    <section class="fixed bottom-0 left-1/2 -translate-x-1/2">
+      <div class="container mb-5 flex">
+        <div
+          class="container absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[rgba(161,224,15,0.4)] to-[rgba(161,224,15,0.4)]"
+        ></div>
+        <div class="mySwiper relative w-[140px] overflow-hidden rounded-s-2xl">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="/uniGuide/assets/homepage01-BhoahxDx.jpg" alt="homepage" />
+            </li>
+            <li class="swiper-slide">
+              <img src="/uniGuide/assets/homepage01-BhoahxDx.jpg" alt="homepage" />
+            </li>
+            <li class="swiper-slide">
+              <img src="/uniGuide/assets/homepage01-BhoahxDx.jpg" alt="homepage" />
+            </li>
+            <li class="swiper-slide">
+              <img src="/uniGuide/assets/homepage01-BhoahxDx.jpg" alt="homepage" />
+            </li>
+            <li class="swiper-slide">
+              <img src="/uniGuide/assets/homepage01-BhoahxDx.jpg" alt="homepage" />
+            </li>
+            <li class="swiper-slide">
+              <img src="/uniGuide/assets/homepage01-BhoahxDx.jpg" alt="homepage" />
+            </li>
+          </ul>
+          <!-- SwiperPagination -->
+          <div class="swiper-pagination -mb-2"></div>
+        </div>
+        <div class="w-[187px] space-y-1 rounded-e-2xl bg-white p-3">
+          <div class="flex items-center justify-between text-sm">
+            <div class="flex items-center gap-x-1">
+              <i class="bx bxs-star mb-[0.4px] leading-4"></i>
+              <span class="font-semibold">4.9</span>
+              <span class="text-neutral-400">(145)</span>
+            </div>
+            <button>
+              <i class="bx bx-heart p-1.5 text-xl leading-5"></i>
+            </button>
+          </div>
+          <p class="pb-2 font-semibold">
+            The Secret Stream Trekking Experience
+          </p>
+          <div class="flex gap-x-1 text-xs leading-5">
+            <p class="font-semibold">$1,050 TWD</p>
+            <p>/ person</p>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="search-result.html"
+        class="container block w-full space-y-4 rounded-t-2xl bg-white pb-[38px] pt-4"
+      >
+        <span
+          class="mx-auto block h-1 w-8 max-w-none rounded-full bg-neutral-200"
+        ></span>
+        <div class="flex items-center justify-center gap-x-2">
+          <span
+            class="text-brand-30 rounded-lg bg-brand-200 px-2 text-xs font-semibold leading-5"
+          >
+            300
+          </span>
+          <p class="text-sm">Experiences</p>
+        </div>
+      </a>
+    </section>
+
+  </body>
+</html>
