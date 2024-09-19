@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        map: "url('/assets/img/map01.jpg')",
+        map: "url('/src/assets/img/map01.jpg')",
       },
 
       fontSize: {},
