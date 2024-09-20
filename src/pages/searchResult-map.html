@@ -6,7 +6,7 @@
     <title>搜尋結果 - 地圖模式</title>
   </head>
   <body class="pt-[154px]">
-    <nav class="fixed left-0 top-0 z-50 w-full bg-white">
+    <nav class="fixed left-0 top-0 z-20 w-full bg-white">
       <%- include('./src/layout/navbar.ejs'); -%> <%-
       include('./src/layout/filter.ejs'); -%>
     </nav>
@@ -93,7 +93,7 @@
         </div>
       </div>
     </section>
-
+    <%- include('./src/layout/filterDrawer.ejs'); -%>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
