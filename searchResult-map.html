@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>搜尋結果 - 地圖模式</title>
-    <script type="module" crossorigin src="/uniGuide/assets/main-B5Eh2BK8.js"></script>
-    <link rel="stylesheet" crossorigin href="/uniGuide/assets/main-DHvJ1G1l.css">
+    <script type="module" crossorigin src="/uniGuide/assets/main-BYgiAd3B.js"></script>
+    <link rel="stylesheet" crossorigin href="/uniGuide/assets/main-BtyplON0.css">
   </head>
   <body>
     <nav class="fixed left-0 top-0 z-20 w-full bg-white">
@@ -14,7 +14,7 @@
         <div class="container">
           <button
             type="button"
-            class="flex w-full items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
+            class="flex w-full cursor-text items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
             data-drawer-target="drawer-left-example"
             data-drawer-show="drawer-left-example"
             data-drawer-placement="left"
@@ -23,247 +23,6 @@
             <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
             Where to?
           </button>
-
-          <div
-  id="drawer-left-example"
-  class="fixed left-0 top-0 z-10 h-screen w-full -translate-x-full overflow-y-auto bg-[#F5F6F6] pb-36 transition-transform"
-  tabindex="-1"
-  aria-labelledby="drawer-left-label"
->
-  <div class="container relative space-y-4">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-x-4">
-        <button
-          type="button"
-          data-drawer-hide="drawer-left-example"
-          aria-controls="drawer-left-example"
-          class="flex items-center justify-center py-3"
-        >
-          <i class="bx bx-left-arrow-alt text-2xl leading-6"></i>
-        </button>
-        <p class="text-2xl font-bold">Plan selection</p>
-      </div>
-
-      <button
-        type="button"
-        data-drawer-hide="drawer-left-example"
-        aria-controls="drawer-left-example"
-        class="flex items-center justify-center py-3 text-sm underline"
-      >
-        Cancel
-      </button>
-    </div>
-
-    <!-- orderMembers Selector -->
-    <div>
-      <button
-        type="button"
-        id="orderAccordion-who"
-        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
-      >
-        <div class="flex gap-x-2">
-          <i class="bx bx-user-pin text-2xl leading-6"></i>
-          <p class="orderMember-title">Guest</p>
-        </div>
-        <p class="text-sm font-semibold">1 Adult</p>
-      </button>
-      <div
-        id="orderMember"
-        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
-      >
-        <div class="py-4">
-          <div class="flex items-center justify-between px-4 py-2">
-            <div>
-              <p>Adult</p>
-              <p class="text-xs text-[#6A706F]">Age 13 or above</p>
-            </div>
-            <div class="flex items-center">
-              <a href="#">
-                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
-              </a>
-              <span class="p-1">1</span>
-              <a href="#">
-                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
-              </a>
-            </div>
-          </div>
-          <div class="flex items-center justify-between px-4 py-2">
-            <div>
-              <p>Child</p>
-              <p class="text-xs text-[#6A706F]">2-12 years old</p>
-            </div>
-            <div class="flex items-center">
-              <a href="#">
-                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
-              </a>
-              <span class="p-1">0</span>
-              <a href="#">
-                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
-              </a>
-            </div>
-          </div>
-          <div class="flex items-center justify-between px-4 py-2">
-            <div>
-              <p>Toddler</p>
-              <p class="text-xs text-[#6A706F]">Under 2 years old</p>
-            </div>
-            <div class="flex items-center">
-              <a href="#">
-                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
-              </a>
-              <span class="p-1">0</span>
-              <a href="#">
-                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
-              </a>
-            </div>
-          </div>
-          <div class="flex items-center justify-between px-4 py-2">
-            <div>
-              <p>Pet</p>
-            </div>
-            <div class="flex items-center">
-              <a href="#">
-                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
-              </a>
-              <span class="p-1">0</span>
-              <a href="#">
-                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Datepicker -->
-    <div>
-      <button
-        type="button"
-        id="orderDropdown-when"
-        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
-      >
-        <div class="flex gap-x-2">
-          <i class="bx bx-calendar text-2xl leading-6"></i>
-          <p class="orderDatepicker-title">Date</p>
-        </div>
-        <p class="orderDatepicker-selected text-sm font-semibold">
-          Thu, Aug 1, 2024
-        </p>
-      </button>
-      <div
-  id="orderDatepicker"
-  class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
->
-  <div class="px-3 py-4">
-    <div class="mb-6 flex items-center justify-between">
-      <p class="ps-2 text-sm font-semibold">August 2024</p>
-      <div class="space-x-2 text-2xl leading-6">
-        <a href="#">
-          <i class="bx bx-chevron-left text-[#E6E7E7]"></i>
-        </a>
-        <a href="#"><i class="bx bx-chevron-right text-[#6A706F]"></i></a>
-      </div>
-    </div>
-    <div id="orderCalendar"></div>
-  </div>
-</div>
-    </div>
-
-    <!-- TimeSelected -->
-    <div>
-      <button
-        type="button"
-        id="orderAccordion-time"
-        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
-      >
-        <div class="flex gap-x-2">
-          <i class="bx bx-time-five text-2xl leading-6"></i>
-          <p class="orderTime-title">Time</p>
-        </div>
-      </button>
-      <div
-        id="orderTime"
-        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
-      >
-        <div class="pb-4 pt-2">
-          <div class="space-y-3 px-4 py-3">
-            <p class="text-sm">Fri, Aug 2, 2024</p>
-            <div class="flex gap-x-2">
-              <button
-                class="rounded-lg bg-brand-300 px-[26px] py-1 font-semibold text-brand-800"
-              >
-                07:00
-              </button>
-              <button
-                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
-              >
-                14:00
-              </button>
-            </div>
-          </div>
-
-          <div class="space-y-3 px-4 py-3">
-            <p class="text-sm">Sat, Aug 3, 2024</p>
-            <div class="flex gap-x-2">
-              <button
-                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
-              >
-                07:00
-              </button>
-              <button
-                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
-              >
-                14:00
-              </button>
-              <button
-                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
-              >
-                18:00
-              </button>
-            </div>
-          </div>
-
-          <div class="space-y-3 px-4 py-3">
-            <p class="text-sm">Mon, Aug 5, 2024</p>
-            <div class="flex gap-x-2">
-              <button
-                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
-              >
-                07:00
-              </button>
-              <button
-                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
-              >
-                14:00
-              </button>
-              <button
-                class="rounded-lg px-[26px] py-1 font-semibold text-[#6A706F] outline outline-1 outline-[#6A706F]"
-              >
-                18:00
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Next Step -->
-    <div
-      class="container fixed bottom-0 left-1/2 -translate-x-1/2 space-y-4 rounded-t-2xl bg-white py-4"
-    >
-      <div class="flex items-center gap-x-2">
-        <p class="text-xl font-bold">From $1,050 TWD /</p>
-        <p class="text-sm">person</p>
-      </div>
-      <a
-        href="checkout.html"
-        class="block w-full rounded-lg bg-brand-300 py-3 text-center text-brand-800 opacity-40 transition-all hover:opacity-100 focus:opacity-100"
-      >
-        Next
-      </a>
-    </div>
-  </div>
-</div>
         </div>
 
         <!-- Tabs -->
@@ -445,6 +204,267 @@
   </ul>
 </div>
     </nav>
+    <div
+  id="drawer-left-example"
+  class="fixed left-0 top-0 z-50 h-screen w-full -translate-x-full overflow-y-auto bg-[#F5F6F6] pb-20 transition-transform"
+  tabindex="-1"
+  aria-labelledby="drawer-left-label"
+>
+  <div class="container relative space-y-4">
+    <button
+      type="button"
+      data-drawer-hide="drawer-left-example"
+      aria-controls="drawer-left-example"
+      class="flex items-center justify-center py-3"
+    >
+      <i class="bx bx-left-arrow-alt text-2xl leading-6"></i>
+    </button>
+
+    <!-- Location Search -->
+    <div class="relative">
+      <button
+        type="button"
+        id="dropdownWhereButton"
+        data-dropdown-toggle="dropdown-where"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+          <p>Where</p>
+        </div>
+        <p class="text-sm font-semibold">Current location</p>
+      </button>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown-where"
+        class="z-20 hidden w-full !-translate-y-0 space-y-3 divide-gray-100 rounded-[20px] bg-white shadow-[0px_12px_16px_-4px_#00000014]"
+      >
+        <div class="mx-2 mt-2 rounded-2xl border border-neutral-100">
+          <label
+            for="location-search"
+            class="sr-only text-sm font-medium text-gray-900"
+          >
+            location-search
+          </label>
+          <div class="flex items-center gap-x-2 rounded-xl px-4">
+            <i class="bx bx-search text-2xl leading-6"></i>
+            <input
+              type="search"
+              id="location-search"
+              class="w-full border-none bg-white px-0 py-2 placeholder:text-black focus:border-transparent focus:ring-transparent"
+              placeholder="Where to?"
+              required
+            />
+            <button class="close-dropdown h-[22px] w-5">
+              <i
+                class="bx bxs-x-circle text-xl leading-[22px] text-[#3C3C4399]"
+              ></i>
+            </button>
+          </div>
+        </div>
+        <div class="space-y-3 px-5 pb-4">
+          <div>
+            <p class="text-xs leading-5 text-neutral-400">Recent</p>
+            <ul class="space-y-1 text-sm" aria-labelledby="dropdownWhereButton">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 rounded-xl p-1 text-sm font-semibold hover:bg-neutral-100"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-2xl leading-6"
+                  ></i>
+                  Taiwan
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 rounded-xl p-1 text-sm font-semibold hover:bg-neutral-100"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-2xl leading-6"
+                  ></i>
+                  Tokyo
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs leading-5 text-neutral-400">Popular</p>
+            <ul
+              class="space-y-1 text-sm"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 rounded-xl p-1 text-sm font-semibold hover:bg-neutral-100"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-2xl leading-6"
+                  ></i>
+                  Bangkok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 rounded-xl p-1 text-sm font-semibold hover:bg-neutral-100"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-2xl leading-6"
+                  ></i>
+                  Canada
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-3 rounded-xl p-1 text-sm font-semibold hover:bg-neutral-100"
+                >
+                  <i
+                    class="bx bx-time-five rounded-full bg-neutral-100 p-1 text-2xl leading-6"
+                  ></i>
+                  Eroupe
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Datepicker -->
+    <div>
+      <button
+        type="button"
+        id="searchDropdown-when"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-calendar text-2xl leading-6"></i>
+          <p class="searchDatepicker-title">When</p>
+        </div>
+        <p class="searchDatepicker-selected text-sm font-semibold">
+          From tomorrow
+        </p>
+      </button>
+      <div
+  id="searchDatepicker"
+  class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
+>
+  <div class="px-3 py-4">
+    <div class="mb-6 flex items-center justify-between">
+      <p class="ps-2 text-sm font-semibold">August 2024</p>
+      <div class="space-x-2 text-2xl leading-6">
+        <a href="#">
+          <i class="bx bx-chevron-left text-[#E6E7E7]"></i>
+        </a>
+        <a href="#"><i class="bx bx-chevron-right text-[#6A706F]"></i></a>
+      </div>
+    </div>
+    <div id="searchCalendar"></div>
+  </div>
+</div>
+    </div>
+
+    <!-- searchMembers Selector -->
+    <div>
+      <button
+        type="button"
+        id="searchAccordion-who"
+        class="flex w-full items-center justify-between rounded-2xl bg-white px-5 py-4 !text-black shadow-[0px_6px_12px_-4px_#0000001A]"
+      >
+        <div class="flex gap-x-2">
+          <i class="bx bx-user-pin text-2xl leading-6"></i>
+          <p class="searchMember-title">Who</p>
+        </div>
+        <p class="searchMember-selected text-sm font-semibold">Only me</p>
+      </button>
+      <div
+        id="searchMember"
+        class="h-0 overflow-hidden rounded-b-2xl bg-white duration-300 ease-in-out"
+      >
+        <div class="py-4">
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Adult</p>
+              <p class="text-xs text-[#6A706F]">Age 13 or above</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">1</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Child</p>
+              <p class="text-xs text-[#6A706F]">2-12 years old</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Toddler</p>
+              <p class="text-xs text-[#6A706F]">Under 2 years old</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center justify-between px-4 py-2">
+            <div>
+              <p>Pet</p>
+            </div>
+            <div class="flex items-center">
+              <a href="#">
+                <i class="bx bx-minus size-[32px] p-2 text-[#E6E7E7]"></i>
+              </a>
+              <span class="p-1">0</span>
+              <a href="#">
+                <i class="bx bx-plus size-[32px] p-2 text-[#6A706F]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Button -->
+    <div
+      class="container fixed bottom-4 left-1/2 flex w-full -translate-x-1/2 justify-center"
+    >
+      <a
+        href="searchResult-map.html"
+        class="flex w-full items-center justify-center rounded-lg bg-brand-300 py-3 font-semibold"
+      >
+        <i class="bx bx-search-alt-2 me-2 text-2xl leading-6"></i>
+        Search
+      </a>
+    </div>
+  </div>
+</div>
+
     <section class="fixed left-1/2 top-[92px] w-full -translate-x-1/2">
       <div class="container relative h-[604px] bg-map bg-cover bg-center">
         <a href="#" class="absolute top-[211px]">
@@ -497,7 +517,7 @@
         <span
           class="container absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[rgba(161,224,15,0.4)] to-[rgba(161,224,15,0.4)]"
         ></span>
-        <a href="search-result.html" class="flex w-full">
+        <a href="tour-schedule.html" class="flex w-full">
           <div
             class="mySwiper relative w-[140px] overflow-hidden rounded-s-2xl"
           >
@@ -586,7 +606,7 @@
       <!-- drawer component 1 - filter -->
       <div
         id="drawer-bottom-1"
-        class="translate-y-full fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
+        class="translate-y-full fixed bottom-0 left-0 right-0 z-50 w-full overflow-y-auto rounded-t-2xl bg-white shadow-sm transition-transform"
         tabindex="-1"
         aria-labelledby="drawer-bottom-1-label"
       >
