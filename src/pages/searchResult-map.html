@@ -12,7 +12,7 @@
         <div class="container">
           <button
             type="button"
-            class="flex w-full items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
+            class="flex w-full cursor-text items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
             data-drawer-target="drawer-left-example"
             data-drawer-show="drawer-left-example"
             data-drawer-placement="left"
@@ -21,8 +21,6 @@
             <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
             Where to?
           </button>
-
-          <%- include('./src/components/searchModal.ejs'); -%>
         </div>
 
         <!-- Tabs -->
@@ -50,6 +48,8 @@
       </div>
       <%- include('./src/layout/filter.ejs'); -%>
     </nav>
+    <%- include('./src/components/searchModal.ejs'); -%>
+
     <section class="fixed left-1/2 top-[92px] w-full -translate-x-1/2">
       <div class="container relative h-[604px] bg-map bg-cover bg-center">
         <a href="#" class="absolute top-[211px]">
