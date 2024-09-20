@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>uniGuide 活動結紹</title>
+    <title>uniGuide 活動介紹</title>
   </head>
   <body>
     <!-- banner  -->
@@ -971,19 +971,18 @@
             <button
               type="button"
               class="w-full rounded-lg bg-brand-300 px-5 py-3 text-center text-base font-semibold text-brand-800 hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-200"
-              data-drawer-target="drawer-left-example"
-              data-drawer-show="drawer-left-example"
+              data-drawer-target="drawer-left"
+              data-drawer-show="drawer-left"
               data-drawer-placement="left"
-              aria-controls="drawer-left-example"
+              aria-controls="drawer-left"
             >
               Book
             </button>
-
-            <%- include('./src/components/orderModal.ejs'); -%>
           </div>
         </div>
       </div>
     </section>
+    <%- include('./src/components/orderModal.ejs'); -%>
 
     <script type="module" src="../main.js"></script>
   </body>
