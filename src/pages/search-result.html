@@ -1,81 +1,55 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>page 4</title>
+    <title>搜尋結果 - 列表模式</title>
   </head>
   <body>
-    <div class="fixed start-0 top-0 z-20 w-full bg-white">
-      <!-- 搜尋框 -->
-      <nav class="container">
-        <form class="mx-auto mb-2">
-          <label
-            for="default-search"
-            class="sr-only mb-2 text-sm font-medium text-gray-900"
-          >
-            Search
-          </label>
-          <div class="relative">
-            <div
-              class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-6"
-            >
-              <i class="bx bx-search-alt-2 text-2xl leading-none"></i>
-            </div>
-            <input
-              type="search"
-              id="default-search"
-              class="block w-full rounded-full border border-0 p-3.5 ps-14 text-sm font-semibold text-gray-900 shadow-xs focus:border-neutral-950 focus:ring-neutral-950"
-              value="Taiwan"
-              placeholder=""
-              required
-            />
-          </div>
-        </form>
-      </nav>
-      <!-- tabs  -->
-      <div class="mb-2 border-b border-gray-200">
+    <nav class="fixed left-0 top-0 z-20 w-full bg-white">
+      <div class="bg-white">
+        <!-- 搜尋框 -->
         <div class="container">
-          <ul
-            class="-mb-px flex flex-wrap text-center text-base font-semibold"
-            id="default-styled-tab"
-            data-tabs-toggle="#default-styled-tab-content"
-            data-tabs-active-classes="text-neutral-950 hover:text-neutral-950 border-neutral-950"
-            data-tabs-inactive-classes="border-transparent text-neutral-950 hover:text-gray-600 border-gray-100 hover:border-gray-300"
-            role="tablist"
+          <button
+            type="button"
+            class="flex w-full cursor-text items-center gap-x-2 rounded-full px-5 py-4 font-semibold shadow-[0px_6px_12px_-4px_#0000001A]"
+            data-drawer-target="drawer-left-example"
+            data-drawer-show="drawer-left-example"
+            data-drawer-placement="left"
+            aria-controls="drawer-left-example"
           >
-            <li class="w-1/2" role="presentation">
-              <button
-                class="inline-block border-b-3 p-2"
-                id="tour-tab"
-                data-tabs-target="#tour"
-                type="button"
-                role="tab"
-                aria-controls="tour"
-                aria-selected="false"
+            <i class="bx bx-search-alt-2 text-2xl leading-6"></i>
+            Taiwan
+          </button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="my-2 border-b border-neutral-100 text-center font-semibold">
+          <ul class="container -mb-px flex px-0">
+            <li class="relative w-full">
+              <a
+                href="#"
+                class="active inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black"
               >
                 Tour
-              </button>
+              </a>
             </li>
-            <li class="w-1/2" role="presentation">
-              <button
-                class="inline-block border-b-3 p-2"
-                id="dashboard-styled-tab"
-                data-tabs-target="#styled-dashboard"
-                type="button"
-                role="tab"
-                aria-controls="dashboard"
-                aria-selected="false"
+            <li class="relative w-full">
+              <a
+                href="#"
+                class="inline-block border-b-2 border-transparent py-2 after:absolute after:bottom-0 after:left-1/2 after:hidden after:h-[3px] after:w-12 after:-translate-x-1/2 after:rounded-full after:bg-black hover:after:block"
+                aria-current="page"
               >
                 Meet-up
-              </button>
+              </a>
             </li>
           </ul>
         </div>
       </div>
-      <!-- 篩選按鈕 -->
       <%- include('./src/layout/filter.ejs'); -%>
-    </div>
+    </nav>
+    <%- include('./src/components/searchModal.ejs'); -%>
+
     <!-- tabs content -->
     <div id="default-styled-tab-content" class="container pb-[89px] pt-[148px]">
       <!-- tabs content TOUR  -->
