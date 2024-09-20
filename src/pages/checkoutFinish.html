@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>搜尋結果 - 列表模式</title>
+  </head>
+  <body>
+    <section class="pt-[166px]"></section>
+    <div class="p-4">
+      <img
+        src="../assets/svg/checkoutFinish.svg"
+        alt="checkoutFinish"
+        class="mx-auto size-[95px]"
+      />
+      <p class="text-center text-2xl font-bold text-brand-400">
+        Booking Completed!
+      </p>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+    <script>
+      window.onload = function () {
+        const delay = 3000;
+        setTimeout(function () {
+          window.location.href = "/";
+        }, delay);
+      };
+    </script>
+  </body>
+</html>
