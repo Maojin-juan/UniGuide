@@ -63,13 +63,6 @@ export default {
         screen: "375px",
       },
 
-      // screens: {
-      //   sm: "375px",
-      //   md: "375px",
-      //   lg: "375px",
-      //   xl: "375px",
-      //   "2xl": "375px",
-      // },
       boxShadow: {
         xxs: "0px 1px 2px 0px #0000000D",
         xs: "0px 1px 2px 0px #0000000F, 0px 1px 3px 0px #0000001A",

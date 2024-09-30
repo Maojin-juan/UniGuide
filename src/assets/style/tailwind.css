@@ -7,22 +7,22 @@
 @layer base {
   /* 擴充專案的全站樣式 */
 
-  /* *,
-  *::before,
-  *::after {
-    outline: 1px solid red;
-  } */
-
   body {
     @apply text-neutral-950;
+  }
+
+  .filter,
+  .Swiperlist,
+  .Badges,
+  .Upcoming::-webkit-scrollbar {
+    @apply hidden;
   }
 }
 
 @layer components {
-
   /* 自組元件 */
   .mySwiper .swiper-pagination-bullet {
-    @apply  !mx-0.5 size-1.5 rounded-full bg-[#E6E7E7A8] opacity-100;
+    @apply !mx-0.5 size-1.5 rounded-full bg-[#E6E7E7A8] opacity-100;
   }
 
   .mySwiper .swiper-pagination-bullet-active {
@@ -34,17 +34,16 @@
     clip: rect(0, 0, 0, 0);
   }
 
-  .btn-check+label {
+  .btn-check + label {
     @apply cursor-pointer;
   }
 
-  .btn-check:checked+label {
+  .btn-check:checked + label {
     @apply bg-brand-300 text-brand-800;
   }
 }
 
 @layer utilities {
-
   /* 自組樣式 */
   .bxs-star {
     color: #ffda44;
@@ -56,7 +55,7 @@
     content: "";
   }
 
-  .dropmenu-checkbox:checked+.datepicker {
+  .dropmenu-checkbox:checked + .datepicker {
     @apply max-h-[300px];
   }
 
