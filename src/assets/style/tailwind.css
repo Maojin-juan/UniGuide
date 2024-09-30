@@ -11,10 +11,7 @@
     @apply text-neutral-950;
   }
 
-  .filter,
-  .Swiperlist,
-  .Badges,
-  .Upcoming::-webkit-scrollbar {
+  .scrollbarHide::-webkit-scrollbar {
     @apply hidden;
   }
 }
