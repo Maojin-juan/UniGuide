@@ -520,67 +520,7 @@
       </div>
     </div>
     <!-- footer  -->
-    <footer
-      class="fixed bottom-0 left-0 z-20 w-full border-t border-gray-200 bg-white px-2 shadow"
-    >
-      <div class="container relative py-1">
-        <ul
-          class="flex flex-wrap items-center justify-between text-xxs font-medium text-neutral-300 sm:mt-0"
-        >
-          <li class="text-center">
-            <a href="#" class="active block p-2 text-neutral-950">
-              <i class="bx bx-search-alt-2 bx-sm mb-1"></i>
-              <p>Explore</p>
-            </a>
-          </li>
-          <li class="text-center">
-            <a href="#" class="block p-2">
-              <i class="bx bx-heart bx-sm mb-1"></i>
-              <p>wishlists</p>
-            </a>
-          </li>
-          <li class="text-center">
-            <a href="#" class="block p-2">
-              <!-- <i class='bx bx-search-alt-2 bx-sm mb-1'></i> -->
-              <img
-                class="inline-block"
-                src="../assets/svg/icon_orders.svg"
-                alt=""
-              />
-              <p>orders</p>
-            </a>
-          </li>
-          <li class="text-center">
-            <a href="#" class="block p-2">
-              <!-- <i class='bx bx-search-alt-2 bx-sm mb-1'></i> -->
-              <img
-                class="inline-block"
-                src="../assets/svg/icon_messages.svg"
-                alt=""
-              />
-              <p>messages</p>
-            </a>
-          </li>
-          <li class="text-center">
-            <a href="#" class="block p-2">
-              <img
-                class="inline-block"
-                src="../assets/svg/icon_profile.svg"
-                alt=""
-              />
-              <p>profile</p>
-            </a>
-          </li>
-        </ul>
-        <!-- swith to map mode  -->
-        <a
-          href="#"
-          class="absolute bottom-full right-0 mb-4 mr-2 rounded-xl bg-neutral-600 p-3 shadow-sm"
-        >
-          <i class="bx bx-map-alt text-2xl leading-none text-white"></i>
-        </a>
-      </div>
-    </footer>
+    <%- include('./src/layout/footer.ejs'); -%>
     <!-- drawer  -->
     <%- include('./src/layout/filterDrawer.ejs'); -%>
 
